@@ -1,0 +1,187 @@
+@media(min-width:1400px) {
+    .container {
+        max-width: 1224px;
+    }
+}
+
+:root {
+    --lime: #CDF765;
+    --black100: #0F0F10;
+    --gray80: #4B4B4B;
+}
+
+:root {
+    scroll-behavior: inherit;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.pagewrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    background-color: #0F0F10;
+    background-image: url('../img/general/grid.png');
+    background-repeat: repeat;
+}
+
+body * {
+    line-height: 150%;
+}
+
+input {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}
+
+.text-end {
+    text-align: right;
+}
+
+.container-customleft {
+    padding-left: calc((100vw - 1200px)/2);
+}
+
+h3,
+.titleh3,
+h2,
+.titleh2 {
+    text-align: center;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 130%;
+    color: #fff;
+}
+
+.limebtn {
+    border: 1px solid var(--lime);
+    background: var(--lime);
+    min-height: 48px;
+    max-width: 185px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black100);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 120%;
+
+    img {
+        margin-left: 6px;
+    }
+}
+
+
+@mixin gradient-subtitle {
+    background: linear-gradient(125.34deg, #B1FFDE 10%, #D9FF6F 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin gradient-subtitle2 {
+    background: linear-gradient(125.34deg, #B1FFDE 70%, #D9FF6F 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin gradient-text1 {
+    background: linear-gradient(125.34deg, #CDFF7C 0%, #8CFFAC 10.63%, #93FFEB 51%, white 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 250% 100%;
+    -webkit-transition: background-position 0.5s ease;
+    transition: background-position 0.5s ease;
+    background-position: 0 0;
+
+    &:hover {
+        background-position: 100% 0;
+    }
+}
+
+@mixin bodytext3 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    color: #fff;
+}
+
+@mixin bodytext4 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+    color: #fff;
+}
+
+
+
+.section-subtitle {
+    span {
+        @include gradient-subtitle;
+        display: inline-block;
+    }
+
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 130%;
+}
+
