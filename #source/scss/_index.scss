@@ -463,6 +463,7 @@
         img {
             position: relative;
             z-index: 2;
+            
         }
     }
 
@@ -569,14 +570,16 @@
 
     }
 
-    .shadowelement {
-        height: 190px;
-        width: 60%;
-        display: block;
-        position: absolute;
-        right: 5%;
-        top: 15%;
-    }
+    // .shadowelement {
+    //     height: 190px;
+    //     width: 60%;
+    //     display: block;
+    //     position: absolute;
+    //     right: 0;
+    //     left: 0;
+    //     top: 15%;
+    //     margin: 0 auto ;
+    // }
 }
 
 .mySwiper2 {
