@@ -1,13 +1,22 @@
+
 @media(min-width:1400px) {
     .container {
         max-width: 1224px;
     }
 }
 
+@media(min-width:1700px) {
+    .container {
+        max-width: 1424px;
+    }
+}
+
 :root {
     --lime: #CDF765;
     --black100: #0F0F10;
+    --black95: #141414;
     --gray80: #4B4B4B;
+    --gray10: #E7EAEC;
 }
 
 :root {
@@ -22,6 +31,11 @@ html {
 
 body * {
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .main {
@@ -39,7 +53,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     background-color: #0F0F10;
-    background-image: url('../img/general/grid.png');
+    background-image: url('../images/general/grid.png');
     background-repeat: repeat;
 }
 
@@ -96,6 +110,10 @@ p {
     text-align: right;
 }
 
+.text-start {
+    text-align: left;
+}
+
 .container-customleft {
     padding-left: calc((100vw - 1200px)/2);
 }
@@ -125,15 +143,21 @@ h2,
     font-size: 16px;
     font-weight: 700;
     line-height: 120%;
+    transition: 0.3s;
 
     img {
         margin-left: 6px;
+    }
+
+    &:hover {
+        box-shadow: 0px 8px 20px rgba(67, 253, 130, 0.25), 0px 26px 50px #2f463a;
     }
 }
 
 
 @mixin gradient-subtitle {
-    background: linear-gradient(125.34deg, #B1FFDE 10%, #D9FF6F 20%);
+    // background: linear-gradient(125.34deg, #B1FFDE 10%, #D9FF6F 40%);
+    background: linear-gradient(125.34deg, #CDFF7C 14.35%, #8CFFAC 33.63%, #93FFEB 101.27%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -185,3 +209,45 @@ h2,
     line-height: 130%;
 }
 
+.borderbtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(77.09deg, #cdff7c 28.29%, #8cffac 87.22%);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+    color: var(--lime);
+    width: 100%;
+    min-height: 67px;
+    max-width: 285px;
+    padding: 5px 10px;
+    background: var(--black100);
+    transition: 0.3s;
+
+    &:hover {
+        background: var(--lime);
+        color: vaR(--black100);
+        box-shadow: 0px 8px 20px rgba(67, 253, 130, 0.25), 0px 26px 50px #2f463a;
+    }
+}
+
+
+
+
+
+
+
+@media(max-width:1400.8px) {
+    .section-subtitle {
+        font-size: 14px;
+    }
+    
+    .titleh2, .titleh3, h2, h3 {
+        font-size: 40px;
+    }
+}

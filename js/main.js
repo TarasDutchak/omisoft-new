@@ -6,6 +6,7 @@ $(document).ready(function () {
         spaceBetween: 20,
         loop: true,
         speed: 6000,
+        allowTouchMove: false,
 
         autoplay: {
             delay: 1,
@@ -14,7 +15,6 @@ $(document).ready(function () {
     });
 
     // expertise hover box
-
     $('.expertise .col').hover(function () {
         $('.expertise .col').removeClass('active');
         $(this).addClass('active');
@@ -40,9 +40,47 @@ $(document).ready(function () {
         $(this).addClass('active');
     })
 
+    // development process
+    const swiper3 = new Swiper('.devprocslider', {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        loop: false,
+        speed: 1000,
+        // breakpoints: {
+            // 640: {
+            //     slidesPerView: 2,
+            //     spaceBetween: 20,
+            // },
+            // 768: {
+            //     slidesPerView: 2,
+            //     spaceBetween: 20,
+            // },
+            // 992: {
+            //     slidesPerView: 3,
+            //     spaceBetween: 27,
+            // },
+        // },
+    });
+    
+    
+
+    const swiper4 = new Swiper('.teamexpslider', {
+        spaceBetween: 0,
+        loop: true,
+        speed: 1000,
+        breakpoints: {
+            1200: {
+                slidesPerView: 6,
+            },
+            1400: {
+                slidesPerView: 7,
+            },
+        },
+    });
 
 
 
+    
 
 
 
