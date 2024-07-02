@@ -196,8 +196,6 @@ h2,
     color: #fff;
 }
 
-
-
 .section-subtitle {
     span {
         @include gradient-subtitle;
@@ -236,18 +234,27 @@ h2,
     }
 }
 
-
-
-
-
-
-
-@media(max-width:1400.8px) {
+@media(max-width:1399.8px) {
     .section-subtitle {
         font-size: 14px;
     }
     
     .titleh2, .titleh3, h2, h3 {
         font-size: 40px;
+    }
+}
+
+@media(max-width:575.8px) {
+    .titleh2, .titleh3, h2, h3 {
+        font-size: 32px;
+    }
+
+    .section-subtitle {
+        font-size: 12px;
+    }
+
+    .borderbtn {
+        min-height: 56px;
+        max-width: 100%;
     }
 }
