@@ -3,6 +3,7 @@
 .herosection {
     position: relative;
     height: 100vh;
+    min-height: 700px;
 
     .container {
         position: relative;
@@ -2132,4 +2133,19 @@
 
 
  
+}
+
+@media(min-width:1440px) and (max-height:730px) {
+    .herosection__topinfo h1 {
+        font-size: 50px;
+    }
+    .herosection__bottinfo {
+        bottom: 20px;
+
+        ul li img {
+            max-height: 80px;
+        }
+    }
+
+
 }
