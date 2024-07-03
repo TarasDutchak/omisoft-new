@@ -102,7 +102,6 @@ $(document).ready(function () {
     }
 
     // Sliders - header
-
     const swiper = new Swiper('.menuslider', {
         slidesPerView: 1,
         spaceBetween: 20,
@@ -156,17 +155,6 @@ $(document).ready(function () {
         });
 
     }
-
-    // $('.dropdown span').click(function(){
-    //     $('header').
-
-    //     $('.dropdown span').not($(this)).removeClass('rotate');
-    //     $(this).toggleClass('rotate');
-
-    //     $('.megamenu').not($(this).next('.megamenu')).removeClass('show');
-    //     $(this).next('.megamenu').toggleClass('show');
-    // });
-
 
     if ($(window).width() < 1200) {
         $('.header__nav li.dropdown span').click(function(){

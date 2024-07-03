@@ -10,6 +10,10 @@ header.header {
     transition: 0.3s;
     border-bottom: 1px solid transparent;
 
+    &.white{
+        background: #fff;
+    }
+
     &.scroll {
         background: rgba(0, 0, 0, 0.9);
         height: 80px;
@@ -113,7 +117,7 @@ header.header {
 
 // active header
 header.header {
-    &.active {
+    &.active, &.white {
         background: #fff;
         border-bottom: 1px solid var(--lime);
 
@@ -152,9 +156,22 @@ header.header {
 
 
     }
+
+    &.white {
+        border-bottom: none;
+
+        &.active {
+            border-bottom: 1px solid var(--lime);
+        }
+
+        .menubtn {
+            filter: brightness(0);
+        }
+    }
 }
 
 // -------------------------------------------------------------
+
 header.scroll {
     .megamenu {
         top: 40px;
@@ -394,6 +411,8 @@ header.scroll {
 .allservices.mob {
     display: none;
 }
+
+
 
 @media(max-width:1399.8px) {
     .megamenu .sidelists ul {

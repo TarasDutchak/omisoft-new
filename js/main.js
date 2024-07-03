@@ -7,7 +7,6 @@ $(document).ready(function () {
         loop: true,
         speed: 6000,
         allowTouchMove: false,
-
         autoplay: {
             delay: 1,
             disableOnInteraction: false,
@@ -20,6 +19,8 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
+
+    // Projects
     const swiperpr = new Swiper('.projbtns', {
         slidesPerView: "auto",
         spaceBetween: 20,
@@ -34,15 +35,11 @@ $(document).ready(function () {
 
     });
 
-
     $('.projbtns .swiper-slide').hover(function(){
         swiperpr.autoplay.stop();
       }, function(){
         swiperpr.autoplay.start();
       });
-
-
-
 
     const swiper1 = new Swiper('.mySwiper2', {
         loop: true,
@@ -61,31 +58,14 @@ $(document).ready(function () {
                 autoHeight: false,
             },
         },
-
     });
-
-
-  
-    
-    // const buttons = document.querySelectorAll('.prbtn');
-    // buttons.forEach(button => {
-    //     button.addEventListener('click', function () {
-    //         const slideIndex = parseInt(this.getAttribute('data-slide-index'));
-    //         swiper1.slideTo(slideIndex, 500); 
-    //     });
-    // });
 
     $('.prbtn').click(function(){
         $('.prbtn').removeClass('active');
         $(this).addClass('active');
     })
 
-
-
-
-
     // development process
-
     var init = false;
     var swiper3;
     function swiperCard() {
@@ -114,15 +94,7 @@ $(document).ready(function () {
     swiperCard();
     window.addEventListener("resize", swiperCard);
 
-
-
-
-
-
-
-
-
-
+    // Our team expertise
     const swiper4 = new Swiper('.teamexpslider', {
         slidesPerView: 1.8,
         spaceBetween: 0,
@@ -141,49 +113,4 @@ $(document).ready(function () {
         },
     });
     
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
 });
-
-
-// if ($(window).width() < 1200) {
-
-// }
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-   
-// });
