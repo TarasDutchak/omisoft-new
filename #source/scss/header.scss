@@ -365,12 +365,18 @@ header.scroll {
 }
 
 .menuslider {
-    padding-bottom: 16px;
+    padding: 16px;
+    margin-top: -16px;
 
     .slidewrapper {
         height: 200px;
         overflow: hidden;
         position: relative;
+        transition: 0.3s;
+
+        &:hover {
+            box-shadow: 0 0 20px rgba(#9747FF, 0.4);
+        }
 
         img {
             border-radius: 4px;

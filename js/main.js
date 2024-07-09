@@ -20,6 +20,9 @@ $(document).ready(function () {
     });
 
 
+
+
+
     // Projects
     const swiperpr = new Swiper('.projbtns', {
         slidesPerView: "auto",
@@ -29,38 +32,44 @@ $(document).ready(function () {
         // allowTouchMove: false,
 
         autoplay: {
-            delay: 1500,
+            delay: 2500,
             disableOnInteraction: false,
         },
 
     });
 
-    $('.projbtns .swiper-slide').hover(function(){
+    $('.projbtns .swiper-slide').hover(function () {
         swiperpr.autoplay.stop();
-      }, function(){
+    }, function () {
         swiperpr.autoplay.start();
-      });
+    });
 
     const swiper1 = new Swiper('.mySwiper2', {
         loop: true,
         spaceBetween: 150,
         speed: 2000,
-        allowTouchMove: false,
+        autoHeight: true,
+        // allowTouchMove: false,
+
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
 
         thumbs: {
             swiper: swiperpr,
-          },
+        },
         breakpoints: {
             992: {
-            autoHeight: true,
-        },
+                autoHeight: true,
+            },
             1200: {
                 autoHeight: false,
             },
         },
     });
 
-    $('.prbtn').click(function(){
+    $('.prbtn').click(function () {
         $('.prbtn').removeClass('active');
         $(this).addClass('active');
     })
@@ -69,27 +78,27 @@ $(document).ready(function () {
     var init = false;
     var swiper3;
     function swiperCard() {
-      if (window.innerWidth >= 576) {
-        if (!init) {
-          init = true;
-          swiper3 = new Swiper(".devprocslider", {
-                   spaceBetween: 20,
-        loop: false,
-        speed: 1000,
-        breakpoints: {
-            576: {
-                slidesPerView: 3,
-            },
-            992: {
-                slidesPerView: 5,
-            },
-        },
-          });
+        if (window.innerWidth >= 576) {
+            if (!init) {
+                init = true;
+                swiper3 = new Swiper(".devprocslider", {
+                    spaceBetween: 20,
+                    loop: false,
+                    speed: 1000,
+                    breakpoints: {
+                        576: {
+                            slidesPerView: 3,
+                        },
+                        992: {
+                            slidesPerView: 5,
+                        },
+                    },
+                });
+            }
+        } else if (init) {
+            swiper3.destroy();
+            init = false;
         }
-      } else if (init) {
-        swiper3.destroy();
-        init = false;
-      }
     }
     swiperCard();
     window.addEventListener("resize", swiperCard);
@@ -112,5 +121,7 @@ $(document).ready(function () {
             },
         },
     });
-    
+
+
+
 });
