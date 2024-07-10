@@ -24,38 +24,70 @@ $(document).ready(function () {
 
 
     // Projects
+    // const swiperpr = new Swiper('.projbtns', {
+    //     slidesPerView: "auto",
+    //     spaceBetween: 20,
+    //     loop: true,
+    //     speed: 2000,
+    //     // allowTouchMove: false,
+
+    //     autoplay: {
+    //         delay: 2500,
+    //         disableOnInteraction: false,
+    //     },
+
+    // });
+
+    // $('.projbtns .swiper-slide').hover(function () {
+    //     swiperpr.autoplay.stop();
+    // }, function () {
+    //     swiperpr.autoplay.start();
+    // });
+
+    // const swiper1 = new Swiper('.mySwiper2', {
+    //     loop: true,
+    //     spaceBetween: 150,
+    //     speed: 2000,
+    //     // autoHeight: true,
+    //     // allowTouchMove: false,
+
+    //     autoplay: {
+    //         delay: 2500,
+    //         disableOnInteraction: false,
+    //     },
+
+    //     thumbs: {
+    //         swiper: swiperpr,
+    //     },
+    //     breakpoints: {
+    //         992: {
+    //             autoHeight: true,
+    //         },
+    //         1200: {
+    //             autoHeight: false,
+    //         },
+    //     },
+    // });
+
     const swiperpr = new Swiper('.projbtns', {
         slidesPerView: "auto",
         spaceBetween: 20,
         loop: true,
         speed: 2000,
-        // allowTouchMove: false,
-
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
         },
-
     });
-
-    $('.projbtns .swiper-slide').hover(function () {
-        swiperpr.autoplay.stop();
-    }, function () {
-        swiperpr.autoplay.start();
-    });
-
+    
     const swiper1 = new Swiper('.mySwiper2', {
         loop: true,
         spaceBetween: 150,
         speed: 2000,
-        // autoHeight: true,
-        // allowTouchMove: false,
-
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        // },
-
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
         thumbs: {
             swiper: swiperpr,
         },
@@ -68,11 +100,14 @@ $(document).ready(function () {
             },
         },
     });
-
-    // $('.prbtn').click(function () {
-    //     $('.prbtn').removeClass('active');
-    //     $(this).addClass('active');
-    // })
+    
+    $('.projbtns .swiper-slide').hover(function () {
+        swiperpr.autoplay.stop();
+        swiper1.autoplay.stop();
+    }, function () {
+        swiperpr.autoplay.start();
+        swiper1.autoplay.start();
+    });
 
     // development process
     var init = false;
