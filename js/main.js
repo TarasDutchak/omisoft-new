@@ -48,13 +48,13 @@ $(document).ready(function () {
         loop: true,
         spaceBetween: 150,
         speed: 2000,
-        autoHeight: true,
+        // autoHeight: true,
         // allowTouchMove: false,
 
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        // },
 
         thumbs: {
             swiper: swiperpr,
@@ -69,10 +69,10 @@ $(document).ready(function () {
         },
     });
 
-    $('.prbtn').click(function () {
-        $('.prbtn').removeClass('active');
-        $(this).addClass('active');
-    })
+    // $('.prbtn').click(function () {
+    //     $('.prbtn').removeClass('active');
+    //     $(this).addClass('active');
+    // })
 
     // development process
     var init = false;

@@ -551,8 +551,9 @@
         transition: 0.3s;
     }
 
-    &:hover,
-    &.active {
+    &:hover
+    // &.active 
+    {
         border-bottom: 1px solid #CDF765;
 
         .imgwrap {
@@ -576,6 +577,10 @@
 
 .projectssection__bottom {
     padding-top: 64px;
+
+    .swiper-wrapper {
+        height: auto !important;
+    }
 }
 
 .projectsslidewrapper {
