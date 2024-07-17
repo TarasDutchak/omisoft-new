@@ -718,6 +718,18 @@
 
 .mySwiper2 {
     overflow: initial;
+
+    .swiper-slide {
+        opacity: 0 !important;
+    }
+
+    .swiper-slide.swiper-slide-visible  {
+        opacity: 1 !important;
+    }
+}
+
+.projectsslidewrapper {
+    // background: #0F0F10;
 }
 
 .projbtns {
@@ -1489,13 +1501,16 @@
     .expertise {
         .scrollwrapper {
             overflow: auto;
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            scrollbar-width: none;  /* Firefox */
 
             &::-webkit-scrollbar {
-                width: 4px;
+                display: none;
             }
 
             &::-webkit-scrollbar-thumb {
                 background-color: transparent;
+                display: none;
             }
         }
 

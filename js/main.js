@@ -73,9 +73,9 @@ $(document).ready(function () {
         slidesPerView: "auto",
         spaceBetween: 20,
         loop: true,
-        speed: 2000,
+        speed: 1000,
         autoplay: {
-            delay: 2500,
+            delay: 3500,
             disableOnInteraction: false,
         },
     });
@@ -83,9 +83,10 @@ $(document).ready(function () {
     const swiper1 = new Swiper('.mySwiper2', {
         loop: true,
         spaceBetween: 150,
-        speed: 2000,
+        speed: 1000,
+        effect: "fade",
         autoplay: {
-            delay: 2500,
+            delay: 3500,
             disableOnInteraction: false,
         },
         thumbs: {
