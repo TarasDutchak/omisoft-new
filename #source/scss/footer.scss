@@ -108,9 +108,21 @@ footer.footer {
     li {
         margin-bottom: 32px;
 
+        &:nth-child(1) {
+            img {
+                width: 130px;
+            }
+        }
+
+        &:nth-child(2) {
+            img {
+                width: 180px;
+            }
+        }
+
         img {
             max-width: 100%;
-            width: 130px;
+            
             
         }
     }
