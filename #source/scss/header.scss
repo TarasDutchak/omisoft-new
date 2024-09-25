@@ -18,6 +18,10 @@ header.header {
         background: rgba(0, 0, 0, 0.9);
         height: 80px;
     }
+
+    &.black {
+        background: rgba(0, 0, 0, 1);
+    }
 }
 
 .header__logo {
