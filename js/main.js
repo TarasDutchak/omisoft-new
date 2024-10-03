@@ -1,3 +1,5 @@
+
+(function ($) {  
 $(document).ready(function () {
     // Featured clients slider
 
@@ -161,3 +163,4 @@ $(document).ready(function () {
 
 
 });
+}(jQuery)); 

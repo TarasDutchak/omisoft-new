@@ -457,6 +457,9 @@ header.scroll {
         position: relative;
         margin-left: 40px;
         vertical-align: middle;
+        padding: 0;
+        border: none;
+        background: transparent;
 
         span {
             background: #fff;
@@ -584,11 +587,6 @@ header.scroll {
             box-shadow: none;
         }
     }
-
-
-
-
-
 
 }
 
@@ -732,7 +730,6 @@ header.scroll {
 
 
 }
-
 
 // -------------------------------------------------
 

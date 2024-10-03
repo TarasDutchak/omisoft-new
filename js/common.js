@@ -1,3 +1,5 @@
+(function ($) {  
+
 $(document).ready(function () {
 
     // header scroll - add class
@@ -178,3 +180,5 @@ $(document).ready(function () {
 
 
 });
+
+}(jQuery)); 

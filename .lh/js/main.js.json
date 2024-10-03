@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1721220177136,
@@ -52,6 +52,10 @@
                 {
                     "date": 1721220548222,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n         spaceBetween: 20,\r\n         loop: true,\r\n         speed: 1000,\r\n         autoplay: {\r\n-            delay: 2500,\r\n+            delay: 3500,\r\n             disableOnInteraction: false,\r\n         },\r\n     });\r\n     \r\n@@ -85,9 +85,9 @@\n         spaceBetween: 150,\r\n         speed: 1000,\r\n         effect: \"fade\",\r\n         autoplay: {\r\n-            delay: 2500,\r\n+            delay: 3500,\r\n             disableOnInteraction: false,\r\n         },\r\n         thumbs: {\r\n             swiper: swiperpr,\r\n"
+                },
+                {
+                    "date": 1727259988002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\r\n+(function ($) {  \r\n $(document).ready(function () {\r\n     // Featured clients slider\r\n \r\n     var swiper = new Swiper(\".brandsslider\", {\r\n@@ -160,4 +162,5 @@\n \r\n \r\n \r\n });\r\n+}(jQuery)); \n\\ No newline at end of file\n"
                 }
             ],
             "date": 1721220177136,
