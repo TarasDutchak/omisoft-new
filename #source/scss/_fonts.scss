@@ -1,2 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 // font-family: "Montserrat", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+// font-family: "PT Sans", sans-serif;
+
+@font-face {
+    font-family: 'PowerGrotesk';
+    src: url('../fonts/PowerGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PowerGrotesk';
+    src: url('../fonts/PowerGrotesk-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}

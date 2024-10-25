@@ -1,0 +1,34 @@
+{
+    "sourceFile": "#source/scss/_fonts.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1729687659805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729687665993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n // font-family: \"Montserrat\", sans-serif;\r\n \r\n \r\n @font-face {\r\n-    font-family: 'chillax';\r\n+    font-family: 'PowerGrotesk';\r\n     src: url('../fonts/PowerGrotesk-Regular.ttf') format('truetype');\r\n     font-weight: 400;\r\n     font-style: normal;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1729687672575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n \r\n @font-face {\r\n     font-family: 'PowerGrotesk';\r\n     src: url('../fonts/PowerGrotesk-Regular.ttf') format('truetype');\r\n-    font-weight: 400;\r\n+    font-weight: normal;\r\n     font-style: normal;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1729688444267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');\r\n // font-family: \"Montserrat\", sans-serif;\r\n-\r\n-\r\n+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');\r\n+// font-family: \"PT Sans\", sans-serif;\r\n @font-face {\r\n     font-family: 'PowerGrotesk';\r\n     src: url('../fonts/PowerGrotesk-Regular.ttf') format('truetype');\r\n     font-weight: normal;\r\n"
+                },
+                {
+                    "date": 1729688526234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,18 @@\n @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');\r\n // font-family: \"Montserrat\", sans-serif;\r\n @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');\r\n // font-family: \"PT Sans\", sans-serif;\r\n+\r\n @font-face {\r\n     font-family: 'PowerGrotesk';\r\n     src: url('../fonts/PowerGrotesk-Regular.ttf') format('truetype');\r\n     font-weight: normal;\r\n     font-style: normal;\r\n\\ No newline at end of file\n-}\n+}\r\n+\r\n+@font-face {\r\n+    font-family: 'PowerGrotesk';\r\n+    src: url('../fonts/PowerGrotesk-Medium.ttf') format('truetype');\r\n+    font-weight: 500;\r\n+    font-style: normal;\r\n+}\r\n"
+                }
+            ],
+            "date": 1729687659805,
+            "name": "Commit-0",
+            "content": "@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');\r\n// font-family: \"Montserrat\", sans-serif;\r\n\r\n\r\n@font-face {\r\n    font-family: 'chillax';\r\n    src: url('../fonts/PowerGrotesk-Regular.ttf') format('truetype');\r\n    font-weight: 400;\r\n    font-style: normal;\r\n}"
+        }
+    ]
+}

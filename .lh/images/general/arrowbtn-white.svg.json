@@ -1,0 +1,18 @@
+{
+    "sourceFile": "images/general/arrowbtn-white.svg",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1729781386581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1729781386581,
+            "name": "Commit-0",
+            "content": "<svg width=\"25\" height=\"24\" viewBox=\"0 0 25 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<path d=\"M9.5 7H17.5M17.5 7V15M17.5 7L6.5 18\" stroke=\"#fff\" stroke-width=\"2\"/>\r\n</svg>\r\n"
+        }
+    ]
+}
