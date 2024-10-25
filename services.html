@@ -1118,6 +1118,34 @@
         </section>
 
         <section class="section-group">
+            <div class="gradient-bg">
+                <svg xmlns='http://www.w3.org/2000/svg' class="noiseBg">
+                    <filter class='noiseFilterBg'>
+                        <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />
+                    </filter>
+
+                    <rect width='100%' height='100%' preserveAspectRatio="xMidYMid meet" filter='url(#noiseFilterBg)' />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="svgBlur">
+                    <defs>
+                        <filter class="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                                result="goo" />
+                            <feBlend in="SourceGraphic" in2="goo" />
+                        </filter>
+                    </defs>
+                </svg>
+                <div class="gradients-container">
+                    <div class="g1"></div>
+                    <div class="g2"></div>
+                    <div class="g3"></div>
+                    <div class="g4"></div>
+                    <div class="g5"></div>
+                    <div class="interactive"></div>
+                </div>
+            </div>
+
             <div class="sformblockwrap">
                 <div class="container">
                     <div class="sformblock">
@@ -1155,10 +1183,98 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5">
-                            <p class="section-subtitle text-left">Tech stack</p>
-                            <h2 class="stitle white">Our cross-platform technologies</h2>
+                            <p class="section-subtitle text-left">FAQ</p>
+                            <h2 class="stitle white">Get to know<br> us better</h2>
                         </div>
-                        <div class="col-lg-7"></div>
+                        <div class="col-lg-7">
+                            <div class="faqwrapper">
+                                <div class="faqrow">
+                                    <div class="faq__header">
+                                        <p>Why OmiSoft?</p>
+                                        <div class="faqstatusicon">
+                                            <span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="faqbody">
+                                        <p>
+                                            Our entire team wants to be rich and work 4 days a week. To achieve this, we
+                                            are ready to dig deeper into our customers' products and businesses to make
+                                            them successful and generate innovations at all. You will be rich = we will
+                                            be rich. So, let's do business together (Checking if anyone reads the FAQ at
+                                            all 🙃)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faqrow">
+                                    <div class="faq__header">
+                                        <p>How does OmiSoft work?</p>
+                                        <div class="faqstatusicon">
+                                            <span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="faqbody">
+                                        <p>
+                                            Our entire team wants to be rich and work 4 days a week. To achieve this, we
+                                            are ready to dig deeper into our customers' products and businesses to make
+                                            them successful and generate innovations at all. You will be rich = we will
+                                            be rich. So, let's do business together (Checking if anyone reads the FAQ at
+                                            all 🙃)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faqrow">
+                                    <div class="faq__header">
+                                        <p>What is OmiSoft's price for Web3 and AI development services?</p>
+                                        <div class="faqstatusicon">
+                                            <span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="faqbody">
+                                        <p>
+                                            Our entire team wants to be rich and work 4 days a week. To achieve this, we
+                                            are ready to dig deeper into our customers' products and businesses to make
+                                            them successful and generate innovations at all. You will be rich = we will
+                                            be rich. So, let's do business together (Checking if anyone reads the FAQ at
+                                            all 🙃)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faqrow">
+                                    <div class="faq__header">
+                                        <p>What if I have an idea but don't have enough money to develop it?</p>
+                                        <div class="faqstatusicon">
+                                            <span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="faqbody">
+                                        <p>
+                                            Our entire team wants to be rich and work 4 days a week. To achieve this, we
+                                            are ready to dig deeper into our customers' products and businesses to make
+                                            them successful and generate innovations at all. You will be rich = we will
+                                            be rich. So, let's do business together (Checking if anyone reads the FAQ at
+                                            all 🙃)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faqrow">
+                                    <div class="faq__header">
+                                        <p>What other cooperation options are there?</p>
+                                        <div class="faqstatusicon">
+                                            <span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="faqbody">
+                                        <p>
+                                            Our entire team wants to be rich and work 4 days a week. To achieve this, we
+                                            are ready to dig deeper into our customers' products and businesses to make
+                                            them successful and generate innovations at all. You will be rich = we will
+                                            be rich. So, let's do business together (Checking if anyone reads the FAQ at
+                                            all 🙃)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
