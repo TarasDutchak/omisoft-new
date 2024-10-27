@@ -84,7 +84,7 @@ $(document).ready(function () {
     // ----------------------testimonials----------------------
     if ($('.testim-centered').length) {
         var swiper = new Swiper(".testim-centered", {
-            slidesPerView: 2.4,
+            slidesPerView: 1.1,
             spaceBetween: 0,
             centeredSlides: true,
             loop: true,
@@ -93,6 +93,23 @@ $(document).ready(function () {
             navigation: {
                 nextEl: ".swiper-button-next-t",
                 prevEl: ".swiper-button-prev-t",
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+            },
+
+            breakpoints: {
+                400: {
+                    slidesPerView: 1.4,
+                },
+                576: {
+                    slidesPerView: 1.5,
+                },
+                1400: {
+                    slidesPerView: 2.4,
+                },
+
             },
         });
     }
@@ -158,33 +175,62 @@ $(document).ready(function () {
             loop: true,
             speed: 1000,
             // autoplay: {
+            //     delay: 2000,
             //     disableOnInteraction: false,
-            //     delay: 2000, 
             // },
+            breakpoints: {
+                480: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 16,
+                },
+                576: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+                992: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 16,
+                },
+                1200: {
+                    slidesPerView: 2.8,
+                    spaceBetween: 16,
+                },
+                1400: {
+                    slidesPerView: 3,
+                    spaceBetween: 16,
+                },
+
+            },
         });
 
         // Функція для перезапуску автоплей
         let autoplayTimeout;
 
+        // Зупиняємо autoplay при скролі мишкою
         swiper.el.addEventListener('wheel', () => {
             console.log('Mouse wheel event detected. Stopping autoplay.');
-            swiper.autoplay.stop(); // Зупиняємо автоплей при прокручуванні мишкою
+            swiper.autoplay.stop();
 
-            // Перезапускаємо автоплей через 2 секунди після зупинки прокручування
             clearTimeout(autoplayTimeout);
+            // Перезапуск через 2 секунди після зупинки прокручування
             autoplayTimeout = setTimeout(() => {
                 console.log('Restarting autoplay after 2 seconds.');
-                swiper.autoplay.start(); // Запускаємо автоплей
-            }, 2000); // Час в мілісекундах (2 секунди)
+                swiper.autoplay.start();
+            }, 2000);
         });
 
-        // Додаткове оброблення події, щоб також зупинити автоплей при взаємодії
+        // Зупиняємо autoplay при дотику
         swiper.on('touchStart', () => {
             console.log('Touch event detected. Stopping autoplay.');
             swiper.autoplay.stop();
         });
+
+        // Перезапуск autoplay через 2 секунди після дотику
         swiper.on('touchEnd', () => {
-            console.log('Touch event ended. Restarting autoplay after 2 seconds.');
             clearTimeout(autoplayTimeout);
             autoplayTimeout = setTimeout(() => {
                 swiper.autoplay.start();
@@ -194,19 +240,38 @@ $(document).ready(function () {
 
 
 
-    if ($('.techslider').length) {
-        const hovercards = document.querySelectorAll('.hovercard');
+    // const hovercards = document.querySelectorAll('.hovercard');
 
-        hovercards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                // Знімаємо клас active з усіх карток
-                hovercards.forEach(c => c.classList.remove('active'));
-                // Додаємо клас active до поточної картки
-                card.classList.add('active');
-            });
-        });
-    }
-    
+    // hovercards.forEach(card => {
+    //     card.addEventListener('mouseenter', () => {
+    //         // Знімаємо клас active з усіх карток
+    //         hovercards.forEach(c => c.classList.remove('active'));
+    //         // Додаємо клас active до поточної картки
+    //         card.classList.add('active');
+    //     });
+    // });
+
+    const hovercards = document.querySelectorAll('.hovercard');
+
+hovercards.forEach(card => {
+    // Обробник наведення курсора
+    card.addEventListener('mouseenter', () => {
+        // Знімаємо клас active з усіх карток
+        hovercards.forEach(c => c.classList.remove('active'));
+        // Додаємо клас active до поточної картки
+        card.classList.add('active');
+    });
+
+    // Обробник кліку
+    card.addEventListener('click', () => {
+        // Знімаємо клас active з усіх карток
+        hovercards.forEach(c => c.classList.remove('active'));
+        // Додаємо клас active до поточної картки
+        card.classList.add('active');
+    });
+});
+
+
 
 
 
