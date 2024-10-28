@@ -168,7 +168,7 @@ $(document).ready(function () {
     // tech stack
     if ($('.techslider').length) {
         var swiper = new Swiper(".techslider", {
-            slidesPerView: 3,
+            slidesPerView: 2.3,
             spaceBetween: 16,
             mousewheel: true,
             freeMode: true,
@@ -253,24 +253,34 @@ $(document).ready(function () {
 
     const hovercards = document.querySelectorAll('.hovercard');
 
-hovercards.forEach(card => {
-    // Обробник наведення курсора
-    card.addEventListener('mouseenter', () => {
-        // Знімаємо клас active з усіх карток
-        hovercards.forEach(c => c.classList.remove('active'));
-        // Додаємо клас active до поточної картки
-        card.classList.add('active');
-    });
+    function setHoverCardBehavior() {
+        hovercards.forEach(card => {
+            const newCard = card.cloneNode(true);
+            card.replaceWith(newCard);
+        });
 
-    // Обробник кліку
-    card.addEventListener('click', () => {
-        // Знімаємо клас active з усіх карток
-        hovercards.forEach(c => c.classList.remove('active'));
-        // Додаємо клас active до поточної картки
-        card.classList.add('active');
-    });
-});
+        const updatedHovercards = document.querySelectorAll('.hovercard');
 
+        if (window.innerWidth > 1200) {
+            updatedHovercards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    updatedHovercards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                });
+            });
+        } else {
+            updatedHovercards.forEach(card => {
+                card.addEventListener('click', () => {
+                    updatedHovercards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                });
+            });
+        }
+    }
+
+    setHoverCardBehavior();
+
+    window.addEventListener('resize', setHoverCardBehavior);
 
 
 

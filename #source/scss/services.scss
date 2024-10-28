@@ -2192,4 +2192,172 @@
     .services-heroblock {
         width: 220px;
     }
+
+    .servheroinfo:nth-child(2) {
+        left: -47px;
+        bottom: -74px;
+    }
+
+    .servheroinfo:nth-child(3) {
+        top: -55px;
+        left: -65px;
+    }
+
+    .servheroinfo:nth-child(4) {
+        top: -38px;
+        right: -50px;
+    }
+
+    .servheroinfo:nth-child(5) {
+        right: -60px;
+        bottom: -74px;
+    }
+
+    .successstory__right {
+        flex-wrap: wrap;
+        padding: 24px;
+
+        .textbox {
+            max-width: 100%;
+            flex: 0 0 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            p {
+                width: 100%;
+                max-width: 50%;
+                flex: 0 0 50%;
+                max-width: 148px;
+            }
+
+            .title {
+                font-size: 20px;
+                margin: 0;
+                max-width: 100%;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    #cards .card img {
+        border-radius: 12px;
+    }
+
+    #cards .card {
+        height: 280px;
+    }
+
+    .section-group .serv-testimonials .testim__slidebox .q {
+        width: 40px;
+    }
+
+    .section-group .serv-testimonials .testim__slidebox .testim__rating .stars img {
+        width: 16px;
+        vertical-align: top;
+    }
+
+    .section-group .serv-testimonials .testim__slidebox .testim__rating.mob {
+        align-items: center;
+    }
+
+    .section-group .serv-testimonials .testim__slidebox .testim__rating {
+        max-width: 135px;
+    }
+
+    .section-group .serv-testimonials .testim__slidebox .testim__rating .stars {
+        align-items: center;
+        display: flex;
+
+        img {
+            margin: 0 2px;
+        }
+    }
+
+    .autotabs ul li.active a {
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .autotabs ul li.active p {
+        font-size: 14px;
+        margin-top: 28px;
+    }
+
+    .autotabs ul li.active a:after {
+        bottom: -12px;
+    }
+
+    .servbansl__slide .lefttext {
+        padding: 45px 22px 0 22px;
+    }
+
+    .techslbox .imgwrap {
+        width: 100%;
+        max-width: 32px;
+        flex: 0 0 32px;
+    }
+    
+    .techslbox p {
+        width: 100%;
+        max-width: calc(100% - 32px);
+        flex: 0 0 calc(100% - 32px);
+    }
+
+    .techslbox {
+        border-radius: 12px;
+        padding: 16px;
+    }
+
+    .techstacksect .container .col-xl-7 {
+        padding-right: 0;
+    }
+
+    .hovercard .showblock p {
+        font-size: 14px;
+    }
+
+    .hovercard .showblock {
+        padding: 28px 20px;
+    }
+
+    .sformblock {
+        padding: 44px 0;
+    }
+
+    .sformblock .sformblock__left {
+        padding: 0 32px;
+    }
+
+
+
+
+
+
+
+
+
+    .serv-testimonials .stitle {
+        text-align: left;
+    }
+}
+
+@media(max-width:359.8px) {
+    .services-heroblock {
+        width: 180px;
+    }
+
+    .section-group .serv-testimonials .greenborder-btn {
+        max-width: 290px;
+    }
+
+    .tabimgs .imgwrap img {
+        object-position: 50% 50%;
+    }
+
+
 }
