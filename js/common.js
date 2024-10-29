@@ -21,7 +21,8 @@ $(document).ready(function () {
     })
 
     // -------------FOOTER--------------------
-    $('.footer__dropdown>span').click(function (e) {
+
+    $('.footer__ddli>span').click(function (e) {
         $(this).toggleClass('active');
         e.preventDefault();
         $(this).next('ul').toggle();
@@ -49,7 +50,7 @@ $(document).ready(function () {
     });
 
     $('.footer__list').each(function () {
-        var $serviceList = $(this).find('.service-list');
+        var $serviceList = $(this).find('ul');
         var $showMore = $(this).find('.footer__showmore');
 
         if ($serviceList.length && $showMore.length) {
@@ -60,6 +61,13 @@ $(document).ready(function () {
             }
         }
     });
+
+
+
+
+
+
+
 
     // ====================================HEADER====================================
     // menu lists
@@ -177,6 +185,10 @@ $(document).ready(function () {
         $(this).toggleClass('open');
         $('.menucolumn').toggleClass('show');
     });
+
+
+
+
 
 
 });

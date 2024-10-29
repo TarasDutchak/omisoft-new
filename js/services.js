@@ -71,14 +71,45 @@ $(document).ready(function () {
 
 
     // ----------------------Success stories----------------------
+    // if ($('.card').length) {
+    //     const cardsbox = document.querySelectorAll('.card');
+
+    //     cardsbox.forEach((cardsbox, index) => {
+    //         cardsbox.style.zIndex = index + 1; // Призначаємо кожному наступному більший z-index
+    //         cardsbox.style.paddingTop = `${20 * (index + 1)}px`; // Збільшуємо padding-top на 20px для кожного наступного
+    //     });
+    // }
+
     if ($('.card').length) {
         const cardsbox = document.querySelectorAll('.card');
-
-        cardsbox.forEach((cardsbox, index) => {
-            cardsbox.style.zIndex = index + 1; // Призначаємо кожному наступному більший z-index
-            cardsbox.style.paddingTop = `${20 * (index + 1)}px`; // Збільшуємо padding-top на 20px для кожного наступного
+    
+        cardsbox.forEach((card, index) => {
+            if (index === 0) {
+                card.style.top = '200px'; // Перший елемент отримує top 100px
+            } else {
+                card.style.top = `${200 + 20 * index}px`; // Наступним додаємо по 20px до top
+            }
+            // card.style.position = 'relative'; // Встановлюємо позицію відносно, щоб працював top
+            card.style.zIndex = index + 1; // Призначаємо кожному наступному більший z-index
         });
     }
+
+    document.addEventListener('scroll', () => {
+        const cards = document.querySelectorAll('#cards .card');
+        const textboxes = document.querySelectorAll('.successstory__right .textboxes');
+    
+        cards.forEach((card, index) => {
+            const rect = card.getBoundingClientRect();
+            // Перевіряємо, чи знаходиться елемент у видимій області екрана
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                // Ховаємо всі textboxes, окрім поточного
+                textboxes.forEach((box, i) => {
+                    box.classList.toggle('hide', i !== index);
+                });
+            }
+        });
+    });
+    
 
 
     // ----------------------testimonials----------------------

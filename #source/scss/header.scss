@@ -644,7 +644,8 @@ header.scroll {
             display: none;
         }
 
-        .container, .c-container {
+        .container,
+        .c-container {
             padding: 0 !important;
             margin: 0;
             max-width: 100%;
@@ -764,10 +765,41 @@ header.scroll {
     align-items: center !important;
 }
 
+@media(min-width:992px) {
+
+    .c-col-lg-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    .c-col-lg-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+
+    .c-col-lg-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .c-col-lg-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+}
+
+@media(min-width:768px) {
+    .c-col-md-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+}
+
 .c-col-6 {
     flex: 0 0 auto;
     width: 50%;
 }
+
 
 .c-col-12 {
     flex: 0 0 auto;
@@ -785,9 +817,6 @@ header.scroll {
 
 
 
-
-
-// c-col-sm-7 c-col-6 c-text-end
 
 
 
