@@ -140,21 +140,42 @@
         
         
 
+        // document.addEventListener('scroll', () => {
+        //     const cards = document.querySelectorAll('#cards .card');
+        //     const textboxes = document.querySelectorAll('.successstory__right .textboxes');
+
+        //     cards.forEach((card, index) => {
+        //         const rect = card.getBoundingClientRect();
+        //         // Перевіряємо, чи знаходиться елемент у видимій області екрана
+        //         if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        //             // Ховаємо всі textboxes, окрім поточного
+        //             textboxes.forEach((box, i) => {
+        //                 box.classList.toggle('hide', i !== index);
+        //             });
+        //         }
+        //     });
+        // });
+
         document.addEventListener('scroll', () => {
             const cards = document.querySelectorAll('#cards .card');
             const textboxes = document.querySelectorAll('.successstory__right .textboxes');
-
+            
+            // Set the distance from the top based on screen width
+            const threshold = window.innerWidth <= 768 ? 500 : 360;
+        
             cards.forEach((card, index) => {
                 const rect = card.getBoundingClientRect();
-                // Перевіряємо, чи знаходиться елемент у видимій області екрана
-                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-                    // Ховаємо всі textboxes, окрім поточного
+                
+                // Check if the card is within the threshold distance from the top of the screen
+                if (rect.top >= 0 && rect.top <= threshold) {
+                    // Hide all textboxes except the current one
                     textboxes.forEach((box, i) => {
                         box.classList.toggle('hide', i !== index);
                     });
                 }
             });
         });
+        
 
 
         // ----------------------testimonials----------------------

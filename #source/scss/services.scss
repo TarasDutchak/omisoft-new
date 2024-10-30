@@ -1249,6 +1249,12 @@
     }
 }
 
+@media(max-width:1440.8px) {
+    #cards .card .imgwrap {
+        height: 550px;
+    }
+}
+
 @media(max-width:1399.8px) {
     .services-heroblockwrap {
         justify-content: center;
