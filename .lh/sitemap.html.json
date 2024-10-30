@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1729685836723,
@@ -52,6 +52,10 @@
                 {
                     "date": 1729685995196,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n <head>\n     <meta charset=\"UTF-8\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n-    <title>Main</title>\n+    <title>Pages</title>\n     <link rel=\"stylesheet\" href=\"css/lib/bootstrap-grid.min.css\">\n     <link rel=\"stylesheet\" href=\"css/lib/swiper-bundle.min.css\">\n     <link rel=\"stylesheet\" href=\"css/header.css\">\n     <link rel=\"stylesheet\" href=\"css/style.css\">\n@@ -46,55 +46,5 @@\n     <script src=\"js/common.js\"></script>\n     <script src=\"js/main.js\"></script>\n </body>\n \n-</html>\n-<!DOCTYPE html>\n-<html lang=\"en\">\n-\n-<head>\n-    <meta charset=\"UTF-8\">\n-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n-    <title>Main</title>\n-    <link rel=\"stylesheet\" href=\"css/lib/bootstrap-grid.min.css\">\n-    <link rel=\"stylesheet\" href=\"css/lib/swiper-bundle.min.css\">\n-    <link rel=\"stylesheet\" href=\"css/header.css\">\n-    <link rel=\"stylesheet\" href=\"css/style.css\">\n-    <link rel=\"stylesheet\" href=\"css/footer.css\">\n-</head>\n-\n-<style>\n-    .sitemap {\n-        min-height: 100vh;\n-        padding: 40px;\n-    }\n-\n-    li {\n-        margin-bottom: 10px;\n-    }\n-\n-    a {\n-        color: #fff;\n-        font-size: 24px;\n-        transition: 0.3s;\n-        font-weight: 500;\n-    }\n-\n-    a:hover {\n-        color: #CDF765;\n-    }\n-</style>\n-\n-<body>\n-    <div class=\"sitemap\">\n-        <ul>\n-            <li><a href=\"index.html\">Main</a></li>\n-            <li><a href=\"services.html\">Services</a></li>\n-        </ul>\n-    </div>\n-    <script src=\"js/lib/jquery.js\"></script>\n-    <script src=\"js/lib/swiper-bundle.min.js\"></script>\n-    <script src=\"js/common.js\"></script>\n-    <script src=\"js/main.js\"></script>\n-</body>\n-\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1730218005028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,10 @@\n     <div class=\"sitemap\">\n         <ul>\n             <li><a href=\"index.html\" target=\"_blank\">Main</a></li>\n             <li><a href=\"services.html\" target=\"_blank\">Services</a></li>\n+            <li><a href=\"contact-us.html\" target=\"_blank\">Services</a></li>\n+            \n         </ul>\n     </div>\n     <script src=\"js/lib/jquery.js\"></script>\n     <script src=\"js/lib/swiper-bundle.min.js\"></script>\n"
                 }
             ],
             "date": 1729685836723,

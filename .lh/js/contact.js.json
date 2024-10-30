@@ -1,0 +1,34 @@
+{
+    "sourceFile": "js/contact.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1730293714433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1730293771667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n (function ($) {\n     $(document).ready(function () {\n \n+        $('.ccontact-section__tabheader button').click(function(){\n+            \n+        })\n \n \n \n-\n     });\n }(jQuery)); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1730293792162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n (function ($) {\n     $(document).ready(function () {\n \n-        $('.ccontact-section__tabheader button').click(function(){\n-            \n+        $('.ccontact-section__tabheader button').click(function () {\n+            $('.ccontact-section__tabheader button').removeClass('active');\n         })\n \n \n \n"
+                },
+                {
+                    "date": 1730293800838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n     $(document).ready(function () {\n \n         $('.ccontact-section__tabheader button').click(function () {\n             $('.ccontact-section__tabheader button').removeClass('active');\n+            $(this).addClass('active');\n         })\n \n \n \n"
+                },
+                {
+                    "date": 1730294021668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,30 @@\n (function ($) {\n     $(document).ready(function () {\n \n         $('.ccontact-section__tabheader button').click(function () {\n+            // Видаляємо клас active з усіх кнопок і додаємо до поточної\n             $('.ccontact-section__tabheader button').removeClass('active');\n             $(this).addClass('active');\n-        })\n+        \n+            // Видаляємо клас \"second\" з таба\n+            $('.ccontact-section__tabbody').removeClass('second');\n+            \n+            // Отримуємо індекс натиснутої кнопки\n+            var index = $(this).index();\n+        \n+            // Показуємо відповідний таб-контент і приховуємо інші\n+            $('.ccontact-section__tabcontent').hide().eq(index).show();\n+        \n+            // Якщо вибрано другий таб (індекс 1), додаємо клас \"second\"\n+            if (index === 1) {\n+                $('.ccontact-section__tabbody').addClass('second');\n+            }\n+        });\n+        \n+        // Спочатку показуємо перший таб і ховаємо інші\n+        $('.ccontact-section__tabcontent').hide().first().show();\n+        \n \n \n \n     });\n"
+                }
+            ],
+            "date": 1730293714433,
+            "name": "Commit-0",
+            "content": "(function ($) {\n    $(document).ready(function () {\n\n\n\n\n\n    });\n}(jQuery)); "
+        }
+    ]
+}
