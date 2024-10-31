@@ -217,46 +217,40 @@
             spaceBetween: 10,
             effect: "fade",
             navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
             autoplay: window.innerWidth > 320 ? { delay: 3000 } : false,
             on: {
-              slideChange: function () {
-                updateActiveClass(this.activeIndex);
-              },
+                slideChange: function () {
+                    updateActiveClass(this.activeIndex);
+                },
             },
-          });
-          
-          let autoplayStopped = false; // Флаг для відстеження, чи автоплей зупинено назавжди
-          
-          // Функція для оновлення класу active
-          function updateActiveClass(activeIndex) {
+        });
+
+        let autoplayStopped = false; // Флаг для відстеження, чи автоплей зупинено назавжди
+
+        // Функція для оновлення класу active
+        function updateActiveClass(activeIndex) {
             document.querySelectorAll(".slide-selector li").forEach((item, index) => {
-              item.classList.toggle("active", index === activeIndex);
+                item.classList.toggle("active", index === activeIndex);
             });
-          }
-          
-          // Додаємо події на ховер і клік для кожного li у списку .slide-selector
-          document.querySelectorAll(".slide-selector li").forEach((item, index) => {
+        }
+
+        // Додаємо події на ховер і клік для кожного li у списку .slide-selector
+        document.querySelectorAll(".slide-selector li").forEach((item, index) => {
             const stopAutoplayAndSwitchSlide = () => {
-              swiper12.slideTo(index);
-          
-              if (!autoplayStopped) {  // Перевіряємо, чи ще не зупинили автоплей назавжди
-                swiper12.autoplay.stop();
-                autoplayStopped = true; // Після зупинки ставимо флаг у true, щоб не запускати автоплей знову
-              }
+                swiper12.slideTo(index);
+
+                if (!autoplayStopped) {  // Перевіряємо, чи ще не зупинили автоплей назавжди
+                    swiper12.autoplay.stop();
+                    autoplayStopped = true; // Після зупинки ставимо флаг у true, щоб не запускати автоплей знову
+                }
             };
-          
+
             item.addEventListener("mouseenter", stopAutoplayAndSwitchSlide);
             item.addEventListener("click", stopAutoplayAndSwitchSlide);
-          });
-          
-          
-
-
-
-
+        });
 
 
 
@@ -347,18 +341,6 @@
             });
         }
 
-
-
-        // const hovercards = document.querySelectorAll('.hovercard');
-
-        // hovercards.forEach(card => {
-        //     card.addEventListener('mouseenter', () => {
-        //         // Знімаємо клас active з усіх карток
-        //         hovercards.forEach(c => c.classList.remove('active'));
-        //         // Додаємо клас active до поточної картки
-        //         card.classList.add('active');
-        //     });
-        // });
 
         const hovercards = document.querySelectorAll('.hovercard');
 
