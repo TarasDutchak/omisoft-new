@@ -77,7 +77,7 @@
 
         // if ($('.card').length) {
         //     const cardsbox = document.querySelectorAll('.card');
-        
+
         //     cardsbox.forEach((card, index) => {
         //         if (index === 0) {
         //             card.style.top = '130px'; // Перший елемент отримує top 130px
@@ -90,16 +90,16 @@
         //     });
         // }
 
-       
+
 
         if ($('.card').length) {
             const cardsbox = document.querySelectorAll('.card');
-        
+
             // Функція для розрахунку top значень
             const setCardPositions = () => {
                 const screenWidth = window.innerWidth; // Отримуємо ширину вікна
                 let firstTop, secondTop;
-        
+
                 // Встановлюємо значення top в залежності від ширини екрану
                 if (screenWidth > 991) {
                     firstTop = 130; // Для ширини > 992px
@@ -110,7 +110,7 @@
                 } else if (screenWidth >= 576) {
                     firstTop = 80; // Для ширини від 576px до 767px
                     secondTop = 330;
-                } 
+                }
                 else if (screenWidth >= 480) {
                     firstTop = 80; // Для ширини від 576px до 767px
                     secondTop = 315;
@@ -118,7 +118,7 @@
                     firstTop = 80; // Для ширини < 576px
                     secondTop = 395;
                 }
-        
+
                 cardsbox.forEach((card, index) => {
                     if (index === 0) {
                         card.style.top = `${firstTop}px`; // Перший елемент отримує top
@@ -130,15 +130,15 @@
                     card.style.zIndex = index + 1; // Призначаємо кожному наступному більший z-index
                 });
             };
-        
+
             setCardPositions(); // Встановлюємо позиції карток
-        
+
             // Додаємо обробник події resize, щоб оновити позиції карток при зміні розміру вікна
             window.addEventListener('resize', setCardPositions);
         }
-        
-        
-        
+
+
+
 
         // document.addEventListener('scroll', () => {
         //     const cards = document.querySelectorAll('#cards .card');
@@ -159,13 +159,13 @@
         document.addEventListener('scroll', () => {
             const cards = document.querySelectorAll('#cards .card');
             const textboxes = document.querySelectorAll('.successstory__right .textboxes');
-            
+
             // Set the distance from the top based on screen width
             const threshold = window.innerWidth <= 768 ? 500 : 360;
-        
+
             cards.forEach((card, index) => {
                 const rect = card.getBoundingClientRect();
-                
+
                 // Check if the card is within the threshold distance from the top of the screen
                 if (rect.top >= 0 && rect.top <= threshold) {
                     // Hide all textboxes except the current one
@@ -175,7 +175,7 @@
                 }
             });
         });
-        
+
 
 
         // ----------------------testimonials----------------------
@@ -212,127 +212,52 @@
         }
 
         // ----------------------Auto tabs----------------------
-        // if ($('.autotabs').length) {
-        //     var currentIndex = 0;
-        //     var totalTabs = $('.autotabs ul li').length;
-        //     var interval;
 
-        //     function switchTab(index) {
-        //         // Активний пункт меню
-        //         $('.autotabs ul li').removeClass('active').eq(index).addClass('active');
-
-        //         // Зображення
-        //         $('.tabimgs .imgwrap').hide().eq(index).fadeIn();
-
-        //         // Тексти
-        //         $('.tabtexts .tabtext').hide().eq(index).fadeIn();
-        //     }
-
-        //     function startAutoSwitch() {
-        //         interval = setInterval(function () {
-        //             currentIndex = (currentIndex + 1) % totalTabs;
-        //             switchTab(currentIndex);
-        //         }, 5000);
-        //     }
-
-        //     startAutoSwitch();
-
-        //     $('.autotabs ul li a').click(function (e) {
-        //         e.preventDefault();
-        //         clearInterval(interval);
-        //         currentIndex = $(this).parent().index(); // отримуємо індекс обраного елементу
-        //         switchTab(currentIndex);
-        //     });
-
-        //     switchTab(currentIndex);
-        // }
-
-        if ($('.autotabs').length) {
-            var currentIndex = 0;
-            var totalTabs = $('.autotabs ul li').length;
-            var interval;
-            var hoverTimeout; // Змінна для зберігання таймера
-        
-            function switchTab(index) {
-                // Зображення
-                $('.tabimgs .imgwrap').hide().eq(index).fadeIn();
-        
-                // Тексти
-                $('.tabtexts .tabtext').hide().eq(index).fadeIn();
-            }
-        
-            function startAutoSwitch() {
-                if (window.innerWidth > 768) { // Запускаємо автоматичне перемикання тільки для десктопів
-                    interval = setInterval(function () {
-                        currentIndex = (currentIndex + 1) % totalTabs;
-                        updateActiveClass(currentIndex); // Оновлюємо клас active
-                        switchTab(currentIndex);
-                    }, 3000);
-                }
-            }
-        
-            startAutoSwitch();
-        
-            function updateActiveClass(index) {
-                // Активний пункт меню
-                $('.autotabs ul li').removeClass('active').eq(index).addClass('active');
-            }
-        
-            function handleTabChange(index) {
-                clearTimeout(hoverTimeout); // Очищаємо таймер при взаємодії
-                clearInterval(interval); // Очищуємо інтервал при взаємодії
-                currentIndex = index; // Зберігаємо поточний індекс
-        
-                // Оновлюємо клас active одразу
-                updateActiveClass(currentIndex);
-        
-                // Затримка перед перемиканням вмісту
-                hoverTimeout = setTimeout(function () {
-                    switchTab(currentIndex); // Перемикаємо таб
-                }, 100); // Затримка 500 мс
-            }
-        
-            // Функція для оновлення обробників подій в залежності від ширини екрана
-            function updateTabHandlers() {
-                $('.autotabs ul li').off(); // Вимикаємо всі попередні обробники подій
-        
-                if (window.innerWidth > 768) { // Для десктопів
-                    $('.autotabs ul li').hover(function () {
-                        var index = $(this).index();
-                        handleTabChange(index);
-                    }, function () {
-                        clearTimeout(hoverTimeout); // Очищаємо таймер, якщо миша виходить
-                    });
-                } else { // Для мобільних пристроїв
-                    $('.autotabs ul li a').click(function (e) {
-                        e.preventDefault();
-                        handleTabChange($(this).parent().index());
-                    });
-                }
-            }
-        
-            // Виклик функції при завантаженні
-            updateTabHandlers();
-        
-            // Додаємо обробник для зміни розміру вікна
-            window.addEventListener('resize', function() {
-                updateTabHandlers();
-                // Якщо ширина вікна зменшується до мобільного вигляду, очищаємо інтервал
-                if (window.innerWidth <= 768) {
-                    clearInterval(interval);
-                } else {
-                    startAutoSwitch(); // Поновлюємо автоматичне перемикання при поверненні до десктопного вигляду
-                }
+        var swiper12 = new Swiper(".mySwiper12", {
+            spaceBetween: 10,
+            effect: "fade",
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            autoplay: window.innerWidth > 320 ? { delay: 3000 } : false,
+            on: {
+              slideChange: function () {
+                updateActiveClass(this.activeIndex);
+              },
+            },
+          });
+          
+          let autoplayStopped = false; // Флаг для відстеження, чи автоплей зупинено назавжди
+          
+          // Функція для оновлення класу active
+          function updateActiveClass(activeIndex) {
+            document.querySelectorAll(".slide-selector li").forEach((item, index) => {
+              item.classList.toggle("active", index === activeIndex);
             });
-        
-            // Ініціалізуємо початковий стан
-            switchTab(currentIndex);
-            updateActiveClass(currentIndex); // Додаємо клас active до початкового таба
-        }
-        
-        
-        
-        
+          }
+          
+          // Додаємо події на ховер і клік для кожного li у списку .slide-selector
+          document.querySelectorAll(".slide-selector li").forEach((item, index) => {
+            const stopAutoplayAndSwitchSlide = () => {
+              swiper12.slideTo(index);
+          
+              if (!autoplayStopped) {  // Перевіряємо, чи ще не зупинили автоплей назавжди
+                swiper12.autoplay.stop();
+                autoplayStopped = true; // Після зупинки ставимо флаг у true, щоб не запускати автоплей знову
+              }
+            };
+          
+            item.addEventListener("mouseenter", stopAutoplayAndSwitchSlide);
+            item.addEventListener("click", stopAutoplayAndSwitchSlide);
+          });
+          
+          
+
+
+
+
+
 
 
         // ----------------------BANER SLIDER----------------------
@@ -482,5 +407,5 @@
 
     })
 
-}(jQuery)); 
+}(jQuery));
 

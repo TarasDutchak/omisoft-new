@@ -689,6 +689,8 @@
 
 .autotabs {
     ul {
+        padding-top: 35px;
+
         li {
             margin-bottom: 32px;
             position: relative;
@@ -697,15 +699,18 @@
                 margin-bottom: 0;
             }
 
-            a {
+            .title {
                 color: var(--dark-grey);
                 font-family: "PT Sans", sans-serif;
                 font-size: 18px;
                 line-height: 135%;
+                display: block;
+                cursor: pointer;
+                margin: 0;
             }
 
             &.active {
-                a {
+                .title {
                     color: var(--lime);
                     font-weight: 600;
                 }
@@ -749,9 +754,9 @@
 }
 
 .tabtexts {
-    padding-left: 20px;
-
     .tabtext {
+        padding-left: 20px;
+
         .count {
             font-family: 'PowerGrotesk';
             display: inline-block;
@@ -782,9 +787,12 @@
     }
 }
 
-.tabimgs .imgwrap,
-.tabtexts .tabtext {
-    display: none;
+.mySwiper12 .swiper-slide {
+    opacity: 0 !important;
+
+    &.swiper-slide-active {
+        opacity: 1 !important;
+    }
 }
 
 .section-group {
@@ -1253,6 +1261,18 @@
     #cards .card .imgwrap {
         height: 550px;
     }
+
+    .mySwiper12 {
+        .col-xxl-6 {
+            &:nth-child(1) {
+                width: 55%;
+            }
+
+            &:nth-child(2) {
+                width: 45%;
+            }
+        }
+    }
 }
 
 @media(max-width:1399.8px) {
@@ -1332,10 +1352,6 @@
         margin-bottom: 143px;
     }
 
-    .autotabs {
-        padding-top: 35px;
-    }
-
     .servbansl__slide .rightimg img {
         max-width: calc(100% - 40px);
     }
@@ -1391,7 +1407,17 @@
         padding: 70px 0;
     }
 
+    .mySwiper12 {
+        .col-xxl-6 {
+            &:nth-child(1) {
+                width: 45%;
+            }
 
+            &:nth-child(2) {
+                width: 55%;
+            }
+        }
+    }
 
 
 
@@ -1608,7 +1634,7 @@
             padding-left: 20px;
 
             li.active {
-                a {
+                .title {
                     font-size: 24px;
                 }
 
@@ -1772,21 +1798,23 @@
         }
     }
 
-    // #cards .card {
-    //     height: 450px;
+    .tabtexts .tabtext {
+        display: none;
+    }
+    .mySwiper12 .col-xxl-6:nth-child(1) {
+        width: 100%;
+    }
+    .mySwiper12 .col-xxl-6:nth-child(2) {
+        display: none;
+    }
 
-    //     img {
-    //         width: 100%;
-    //         height: 100%;
-    //         object-fit: cover;
-    //         object-position: 0 0;
-    //     }
-    // }
+    .autotabs ul {
+        padding-top: 0;
+    }
 
-
-
-
-
+    .autotabs ul li.active p.title {
+        margin-top: 0;
+    }
 
 
 
@@ -2106,15 +2134,15 @@
         margin-bottom: 24px;
     }
 
-    .autotabs ul li a {
+    .autotabs ul li .title {
         display: block;
     }
 
-    .autotabs ul li.active a {
+    .autotabs ul li.active .title {
         position: relative;
     }
 
-    .autotabs ul li.active a::after {
+    .autotabs ul li.active .title::after {
         content: "";
         display: block;
         width: 100%;
@@ -2375,7 +2403,7 @@
         }
     }
 
-    .autotabs ul li.active a {
+    .autotabs ul li.active .title {
         font-weight: 500;
         font-size: 20px;
     }
@@ -2385,7 +2413,7 @@
         margin-top: 28px;
     }
 
-    .autotabs ul li.active a:after {
+    .autotabs ul li.active .title:after {
         bottom: -12px;
     }
 
