@@ -11,6 +11,12 @@
 
 }
 
+.blackbg {
+    background: var(--black100);
+    font-family: "PT Sans", sans-serif;
+}
+
+
 :root {
     --lime: #CDF765;
     --black100: #0F0F10;
@@ -24,6 +30,22 @@
     --light-grey: #EDEFEE;
 
     --grey: #CFD1CC;
+
+
+
+
+
+    // anim
+    --color-bg1: rgb(15, 15, 16);
+    --color-bg2: rgb(15, 15, 16);
+    --color1: 147, 255, 235;
+    --color2: 147, 255, 235;
+    --color3: 205, 247, 101;
+    --color4: 147, 255, 235;
+    --color5: 205, 247, 101;
+    --color-interactive: 205, 247, 101;
+    --circle-size: 80%;
+    --blending: hard-light;
 }
 
 :root {

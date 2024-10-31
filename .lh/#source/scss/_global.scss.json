@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 69,
+            "activePatchIndex": 73,
             "patches": [
                 {
                     "date": 1729686239692,
@@ -284,6 +284,22 @@
                 {
                     "date": 1730379283069,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -574,9 +574,8 @@\n     align-items: center;\r\n     justify-content: center;\r\n     height: 100%;\r\n     width: 100%;\r\n-    background: red;\r\n }\r\n \r\n @-webkit-keyframes ani {\r\n     from {\r\n"
+                },
+                {
+                    "date": 1730385168710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,19 @@\n     }\r\n \r\n }\r\n \r\n+--color-bg1: rgb(15, 15, 16);\r\n+--color-bg2: rgb(15, 15, 16);\r\n+--color1: 147, 255, 235;\r\n+--color2: 147, 255, 235;\r\n+--color3: 205, 247, 101;\r\n+--color4: 147, 255, 235;\r\n+--color5: 205, 247, 101;\r\n+--color-interactive: 205, 247, 101;\r\n+--circle-size: 80%;\r\n+--blending: hard-light;\r\n+\r\n :root {\r\n     --lime: #CDF765;\r\n     --black100: #0F0F10;\r\n     --black95: #141414;\r\n"
+                },
+                {
+                    "date": 1730385178261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,19 +10,10 @@\n     }\r\n \r\n }\r\n \r\n---color-bg1: rgb(15, 15, 16);\r\n---color-bg2: rgb(15, 15, 16);\r\n---color1: 147, 255, 235;\r\n---color2: 147, 255, 235;\r\n---color3: 205, 247, 101;\r\n---color4: 147, 255, 235;\r\n---color5: 205, 247, 101;\r\n---color-interactive: 205, 247, 101;\r\n---circle-size: 80%;\r\n---blending: hard-light;\r\n \r\n+\r\n :root {\r\n     --lime: #CDF765;\r\n     --black100: #0F0F10;\r\n     --black95: #141414;\r\n@@ -34,8 +25,24 @@\n     --dark-grey: #858B89;\r\n     --light-grey: #EDEFEE;\r\n \r\n     --grey: #CFD1CC;\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+    // anim\r\n+    --color-bg1: rgb(15, 15, 16);\r\n+    --color-bg2: rgb(15, 15, 16);\r\n+    --color1: 147, 255, 235;\r\n+    --color2: 147, 255, 235;\r\n+    --color3: 205, 247, 101;\r\n+    --color4: 147, 255, 235;\r\n+    --color5: 205, 247, 101;\r\n+    --color-interactive: 205, 247, 101;\r\n+    --circle-size: 80%;\r\n+    --blending: hard-light;\r\n }\r\n \r\n :root {\r\n     scroll-behavior: inherit;\r\n"
+                },
+                {
+                    "date": 1730387922465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,11 @@\n     }\r\n \r\n }\r\n \r\n+.blackbg {\r\n+    background: var(--black100);\r\n+}\r\n \r\n \r\n :root {\r\n     --lime: #CDF765;\r\n"
+                },
+                {
+                    "date": 1730389381682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n }\r\n \r\n .blackbg {\r\n     background: var(--black100);\r\n+    font-family: \"PT Sans\", sans-serif;\r\n }\r\n \r\n \r\n :root {\r\n"
                 }
             ],
             "date": 1729686239692,

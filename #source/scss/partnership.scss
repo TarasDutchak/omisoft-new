@@ -1,0 +1,122 @@
+.herosection-partners {
+    height: 772px;
+    background: var(--black100);
+    padding: 60px 0;
+    position: relative;
+    font-family: "PT Sans", sans-serif;
+   
+
+    .gradient-bg {
+        height: 100%;
+
+        .g1 {
+            left: initial;
+            right: 0;
+        }
+
+        .g2 {
+            width: 50%;
+            height: 50%;
+            left: initial;
+            right: 15%;
+        }
+
+        .g3 {
+            left: initial;
+            right: 15%;
+        }
+
+        .g5 {
+            display: none;
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.herosection-partners__descr {
+    padding-top: 100px;
+
+    h1 {
+        font-weight: 500;
+        color: #fff;
+        font-size: 60px;
+        line-height: 110%;
+        font-family: "PowerGrotesk";
+        margin-bottom: 20px;
+
+        span {
+            display: block;
+            line-height: 110%;
+            background: linear-gradient(125.34deg, #CDFF7C 10%, #8CFFAC 70%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    p {
+        max-width: 344px;
+        color: var(--grey);
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+.heroimgsect {
+    z-index: 2;
+    position: absolute;
+    width: 822px;
+    height: 494px;
+    bottom: 0;
+    right: calc((100vw - 1450px) / 2);
+
+    .svgpic {
+        position: absolute;
+        z-index: 2;
+        top: -72px;
+        left: 8px;
+    }
+}
+
+.sectcount {
+    background: #fff;
+    border-radius: 20px;
+    background: #EDEFEE;
+    padding: 60px 0;
+}
+
+.countboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.countbox {
+    width: 164px;
+
+    .count-number {
+        font-size: 60px;
+        line-height: 110%;
+        font-family: 'PowerGrotesk';
+        font-weight: 500;
+        margin-bottom: 4px;
+        display: block;
+    }
+
+    i {
+        font-style: normal;
+        font-size: 24px;
+        display: block;
+        line-height: 130%;
+    }
+
+    p {
+        margin: 0;
+        font-size: 20px;
+        line-height: 130%;
+        color: var(--dark);
+    }
+}
