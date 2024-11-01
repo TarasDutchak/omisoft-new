@@ -544,7 +544,7 @@ h2,
     width: 200px;
     height: 47px;
     overflow: hidden;
-    border: 1px solid #fff;
+    // border: 1px solid #fff;
     transition: 0.5s;
     border-radius: 8px;
     color: var(--dark);
@@ -584,7 +584,6 @@ h2,
 
 .mas {
     position: absolute;
-    color: #fff;
     text-align: center;
     width: 101%;
     position: absolute;
@@ -597,6 +596,7 @@ h2,
     justify-content: center;
     height: 100%;
     width: 100%;
+    background: #CDF765;
 }
 
 @-webkit-keyframes ani {
