@@ -10,11 +10,11 @@
 
     .swiper-slide {
         transition: all 200ms linear;
-        transform: scale(0.8);
+        transform: scale(0.8) !important;
         filter: blur(4px);
 
         &.swiper-slide-active {
-            transform: scale(1);
+            transform: scale(1) !important;
             filter: blur(0);
         }
     }

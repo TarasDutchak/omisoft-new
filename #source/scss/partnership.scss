@@ -292,6 +292,10 @@
         transition-timing-function: linear;
         // justify-content: center;
     }
+
+    .brandblock {
+        justify-content: center;
+    }
 }
 
 // ---
@@ -361,17 +365,40 @@
 
 }
 
+// .omisoftlogoslider-wrap {
+//     .omisoftlogoslider {
+//         .swiper-slide {
+//             // width: auto;
+
+//             .brandblock {
+//                 // height: 66px;
+//                 display: flex;
+//                 align-items: center;
+//                 padding: 0 30px;
+//                 opacity: 0.5;
+//             }
+
+//             img {
+//                 max-height: 66px;
+//             }
+//         }
+//     }
+
+//     .swiper-wrapper {
+//         transition-timing-function: linear;
+//         justify-content: center;
+//     }
+// }
+
 .omisoftlogoslider-wrap {
     padding: 160px 0 100px;
-}
 
-.omisoftlogoslider-wrap {
-    .omisoftlogoslider {
+    .partnerslider {
         .swiper-slide {
-            width: auto;
+            // width: auto;
 
             .brandblock {
-                height: 66px;
+                // height: 40px;
                 display: flex;
                 align-items: center;
                 padding: 0 30px;
@@ -379,16 +406,28 @@
             }
 
             img {
-                max-height: 66px;
+                max-height: 40px;
             }
         }
     }
 
     .swiper-wrapper {
         transition-timing-function: linear;
+        // justify-content: center;
+    }
+
+    .brandblock {
         justify-content: center;
     }
 }
+
+
+
+
+
+
+
+
 
 .becomepartner__mainimg {
     max-width: 450px;

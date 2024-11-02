@@ -45,12 +45,10 @@
         // });
 
         const swiper = new Swiper(".partnerslider", {
-            slidesPerView: "auto",
+            slidesPerView: 7,
             spaceBetween: 20,
             loop: true,
             speed: 6000,
-            allowTouchMove: false,
-            loadPrevNext: true,
             autoplay: {
                 delay: 1,
                 disableOnInteraction: false,
@@ -59,11 +57,10 @@
 
         // omisoft baners
         var swiperOmisoft = new Swiper(".omisoftlogoslider", {
-            slidesPerView: "auto",
-            spaceBetween: 0,
+            slidesPerView: 4,
+            spaceBetween: 20,
             loop: true,
-            speed: 8000,
-            allowTouchMove: false,
+            speed: 6000,
             autoplay: {
                 delay: 1,
                 disableOnInteraction: false,

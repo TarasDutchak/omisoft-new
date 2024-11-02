@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 51,
+            "activePatchIndex": 56,
             "patches": [
                 {
                     "date": 1730388250484,
@@ -212,6 +212,26 @@
                 {
                     "date": 1730536044850,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n         const swiper = new Swiper(\".partnerslider\", {\n             slidesPerView: \"auto\",\n             spaceBetween: 20,\n             loop: true,\n-            speed: 2000,\n+            speed: 6000,\n             allowTouchMove: false,\n             loadPrevNext: true,\n             autoplay: {\n                 delay: 1,\n"
+                },
+                {
+                    "date": 1730536556053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,10 +48,10 @@\n             slidesPerView: \"auto\",\n             spaceBetween: 20,\n             loop: true,\n             speed: 6000,\n-            allowTouchMove: false,\n-            loadPrevNext: true,\n+            // allowTouchMove: false,\n+            // loadPrevNext: true,\n             autoplay: {\n                 delay: 1,\n                 disableOnInteraction: false,\n             },\n"
+                },
+                {
+                    "date": 1730536577035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n         //     }\n         // });\n \n         const swiper = new Swiper(\".partnerslider\", {\n-            slidesPerView: \"auto\",\n+            slidesPerView: 5,\n             spaceBetween: 20,\n             loop: true,\n             speed: 6000,\n             // allowTouchMove: false,\n"
+                },
+                {
+                    "date": 1730536594914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n         //     }\n         // });\n \n         const swiper = new Swiper(\".partnerslider\", {\n-            slidesPerView: 5,\n+            slidesPerView: 7,\n             spaceBetween: 20,\n             loop: true,\n             speed: 6000,\n             // allowTouchMove: false,\n"
+                },
+                {
+                    "date": 1730536914354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n         });\n \n         // omisoft baners\n         var swiperOmisoft = new Swiper(\".omisoftlogoslider\", {\n-            slidesPerView: \"auto\",\n+            slidesPerView: 4,\n             spaceBetween: 0,\n             loop: true,\n             speed: 8000,\n             allowTouchMove: false,\n"
+                },
+                {
+                    "date": 1730536954376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,77 @@\n+(function ($) {\n+    $(document).ready(function () {\n+\n+        // // partnerslider\n+        // const swiperContainer = document.querySelector(\".partnerslider\");\n+        // const swiperSlides = swiperContainer.querySelectorAll(\".swiper-slide\");\n+\n+        // // Функція для визначення, чи вміщуються всі слайди\n+        // function shouldAutoplay() {\n+        //     let totalSlidesWidth = 0;\n+        //     swiperSlides.forEach(slide => {\n+        //         totalSlidesWidth += slide.offsetWidth + 20; // ширина слайда + відстань між слайдами\n+        //     });\n+        //     return totalSlidesWidth > swiperContainer.offsetWidth;\n+        // }\n+\n+        // // Ініціалізація Swiper\n+        // const swiper = new Swiper(\".partnerslider\", {\n+        //     slidesPerView: \"auto\",\n+        //     spaceBetween: 20,\n+        //     loop: true,\n+        //     speed: 6000,\n+        //     allowTouchMove: false,\n+        //     loadPrevNext: true,\n+        //     autoplay: {\n+        //         delay: 1,\n+        //         disableOnInteraction: false,\n+        //     },\n+        // });\n+\n+        // // Увімкнення або вимкнення autoplay залежно від розміру\n+        // if (shouldAutoplay()) {\n+        //     swiper.autoplay.start();\n+        // } else {\n+        //     swiper.autoplay.stop();\n+        // }\n+\n+        // // Перевірка при зміні розміру вікна\n+        // window.addEventListener(\"resize\", () => {\n+        //     if (shouldAutoplay()) {\n+        //         swiper.autoplay.start();\n+        //     } else {\n+        //         swiper.autoplay.stop();\n+        //     }\n+        // });\n+\n+        const swiper = new Swiper(\".partnerslider\", {\n+            slidesPerView: 7,\n+            spaceBetween: 20,\n+            loop: true,\n+            speed: 6000,\n+            autoplay: {\n+                delay: 1,\n+                disableOnInteraction: false,\n+            },\n+        });\n+\n+        // omisoft baners\n+        var swiperOmisoft = new Swiper(\".omisoftlogoslider\", {\n+            slidesPerView: 4,\n+            spaceBetween: 20,\n+            loop: true,\n+            speed: 6000,\n+            autoplay: {\n+                delay: 1,\n+                disableOnInteraction: false,\n+            },\n+        });\n+\n+\n+\n+    });\n+}(jQuery));\n+\n+\n+\n+\n"
                 }
             ],
             "date": 1730388250484,
