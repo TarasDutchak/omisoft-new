@@ -295,7 +295,10 @@
                     576: {
                         slidesPerView: 1.5,
                     },
-                    1400: {
+                    768: {
+                        slidesPerView: 1.1,
+                    },
+                    991: {
                         slidesPerView: 1.8,
                     },
                     1500: {

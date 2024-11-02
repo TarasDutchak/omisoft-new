@@ -1,63 +1,42 @@
 (function ($) {
     $(document).ready(function () {
 
-        // // partnerslider
-        // const swiperContainer = document.querySelector(".partnerslider");
-        // const swiperSlides = swiperContainer.querySelectorAll(".swiper-slide");
-
-        // // Функція для визначення, чи вміщуються всі слайди
-        // function shouldAutoplay() {
-        //     let totalSlidesWidth = 0;
-        //     swiperSlides.forEach(slide => {
-        //         totalSlidesWidth += slide.offsetWidth + 20; // ширина слайда + відстань між слайдами
-        //     });
-        //     return totalSlidesWidth > swiperContainer.offsetWidth;
-        // }
-
-        // // Ініціалізація Swiper
-        // const swiper = new Swiper(".partnerslider", {
-        //     slidesPerView: "auto",
-        //     spaceBetween: 20,
-        //     loop: true,
-        //     speed: 6000,
-        //     allowTouchMove: false,
-        //     loadPrevNext: true,
-        //     autoplay: {
-        //         delay: 1,
-        //         disableOnInteraction: false,
-        //     },
-        // });
-
-        // // Увімкнення або вимкнення autoplay залежно від розміру
-        // if (shouldAutoplay()) {
-        //     swiper.autoplay.start();
-        // } else {
-        //     swiper.autoplay.stop();
-        // }
-
-        // // Перевірка при зміні розміру вікна
-        // window.addEventListener("resize", () => {
-        //     if (shouldAutoplay()) {
-        //         swiper.autoplay.start();
-        //     } else {
-        //         swiper.autoplay.stop();
-        //     }
-        // });
 
         const swiper = new Swiper(".partnerslider", {
-            slidesPerView: 7,
+            slidesPerView: 1.8,
             spaceBetween: 20,
             loop: true,
             speed: 6000,
             autoplay: {
                 delay: 1,
                 disableOnInteraction: false,
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 3.2,
+                },
+                992: {
+                    slidesPerView: 4,
+                },
+                1200: {
+                    slidesPerView: 5,
+                },
+                1400: {
+                    slidesPerView: 6,
+                },
+                1600: {
+                    slidesPerView: 7,
+                },
+
             },
         });
 
         // omisoft baners
         var swiperOmisoft = new Swiper(".omisoftlogoslider", {
-            slidesPerView: 4,
+            slidesPerView: 1.2,
             spaceBetween: 20,
             loop: true,
             speed: 6000,
@@ -65,6 +44,26 @@
                 delay: 1,
                 disableOnInteraction: false,
             },
+
+            breakpoints: {
+                400: {
+                    slidesPerView: 1.4,
+                },
+                576: {
+                    slidesPerView: 1.5,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                991: {
+                    slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 4,
+                },
+
+            },
+            
         });
 
 

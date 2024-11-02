@@ -350,7 +350,7 @@
     }
 }
 
-.becomepartner__mainimg {
+.becomepartner__mainimg img {
     position: absolute;
     right: 44px;
     bottom: 0;
@@ -421,19 +421,9 @@
     }
 }
 
-
-
-
-
-
-
-
-
-.becomepartner__mainimg {
+.becomepartner__mainimg img {
     max-width: 450px;
 }
-
-
 
 
 @media(max-width:1599.8px) {
@@ -475,7 +465,7 @@
         padding: 100px 0 0 88px;
     }
 
-    .becomepartner__mainimg {
+    .becomepartner__mainimg img {
         right: -10px;
     }
 
@@ -528,10 +518,10 @@
     }
 
     .becomepartner__svgel {
-       width: 550px;
+        width: 550px;
     }
 
-  
+
 
 
 
@@ -540,14 +530,332 @@
     }
 }
 
+@media(max-width:991.8px) {
+    .herosection-partners {
+        padding-bottom: 0;
+    }
+
+    .heroimgsect {
+        position: relative;
+        right: initial;
+        width: 100%;
+    }
+
+    .herosection-partners__descr {
+        position: relative;
+        z-index: 4;
+
+        h1 br {
+            display: none;
+        }
+
+    }
+
+    .herosection-partners__descr h1 span {
+        display: inline-block;
+    }
+
+    .herosection-partners__descr p {
+        font-size: 18px;
+        line-height: 135%;
+    }
+
+    .herosection-partners .container {
+        z-index: 4;
+    }
+
+    .herosection-partners {
+        height: auto;
+    }
+
+    .whypartnerswithus__box {
+        padding: 32px;
+
+        .descrwrap {
+            padding-left: 16px;
+        }
+    }
+
+    .whypartnerswithus__box .descrwrap h6 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .waystocollaborate {
+        padding: 60px 0 40px;
+    }
+
+    .waystocollaborate__box {
+        margin-bottom: 96px;
+    }
+
+    .becomepartner .becomepartner__left {
+        padding: 60px 0 0 40px;
+    }
+
+    .becomepartner__mainimg img {
+        width: 324px;
+        margin-right: -15px;
+    }
+
+    .becomepartner .becomepartner__left {
+        min-height: 345px;
+    }
+
+    .becomepartner__svgel {
+        width: 300px;
+        right: 80px;
+    }
+
+    .omisoftlogoslider-wrap {
+        padding: 100px 0 60px;
+    }
 
 
 
 
-
-
-
-
-.gradient-bg {
-    display: none;
 }
+
+@media(max-width:767.8px) {
+
+    .countbox {
+        width: 100%;
+        max-width: 50%;
+        flex: 0 0 50%;
+        margin-bottom: 24px;
+
+        &:nth-child(3),
+        &:nth-child(4) {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .waystocollaborate .sn3 br {
+        display: none;
+    }
+
+    .waystocollaborate {
+        height: auto;
+    }
+
+    .becomepartner .becomepartner__left {
+        padding: 60px 20px 310px 40px;
+    }
+
+    .becomepartner__svgel {
+        width: 360px;
+    }
+
+    .becomepartner-sect {
+        padding-top: 0;
+    }
+
+
+
+
+
+
+
+
+    .whypartnerswithus {
+        padding-top: 120px;
+    }
+
+    .whypartnerswithus h2,
+    .waystocollaborate .sn3,
+    .becomepartner .becomepartner__left .title,
+    .sfaqsect .stitle {
+
+        font-size: 34px;
+    }
+
+}
+
+@media(max-width:575.8px) {
+
+    .herosection-partners__descr h1 {
+        font-size: 40px;
+    }
+
+    .heroimgsect {
+        margin-top: 50px;
+    }
+
+    .whypartnerswithus__box {
+        padding: 24px;
+        min-height: initial;
+    }
+
+    .whypartnerswithus__box .imgwrap,
+    .whypartnerswithus__box .descrwrap {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .whypartnerswithus__box .imgwrap {
+        margin-bottom: 12px;
+
+        img {
+            max-width: 40px;
+        }
+    }
+
+    .whypartnerswithus__box .descrwrap {
+        padding-left: 0;
+
+        p {
+            font-size: 14px;
+        }
+
+        h6 {
+            font-size: 16px;
+            line-height: 135%;
+        }
+    }
+
+    .patnership .serv-testimonials {
+        padding-top: 60px;
+        padding-bottom: 120px;
+    }
+
+    .waystocollaborate .sn3 br:nth-child(1) {
+        display: block;
+    }
+
+    .waystocollaborate__box .number {
+        font-size: 48px;
+    }
+
+    .waystocollaborate__box {
+        padding-left: 90px;
+        margin-bottom: 44px;
+    }
+
+    .sliderpartnerwrap {
+        padding: 60px 0 100px;
+    }
+
+    .sliderpartnerwrap .partnerslider .swiper-slide .brandblock {
+        padding: 0;
+    }
+
+    .becomepartner__svgel {
+        right: 50px;
+    }
+
+
+
+    .becomepartner .becomepartner__left .title,
+    .sfaqsect .stitle,
+    .waystocollaborate .sn3,
+    .whypartnerswithus h2 {
+        font-size: 32px;
+    }
+
+    .whypartnerswithus h2 {
+        margin-bottom: 32px;
+    }
+}
+
+@media(max-width:479.8px) {
+    .herosection-partners__descr {
+        padding-top: 90px;
+    }
+
+    .heroimgsect {
+        margin-top: 120px;
+    }
+
+    .whypartnerswithus__box .imgwrap img {
+        vertical-align: top;
+    }
+
+    .whypartnerswithus {
+        padding-bottom: 40px;
+    }
+
+    .waystocollaborate__box .title {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .waystocollaborate__box .descr p {
+        font-size: 14px;
+    }
+
+    .becomepartner .becomepartner__left {
+        padding: 50px 32px 0 32px;
+        min-height: initial;
+        margin-bottom: 11px;
+    }
+
+    .becomepartner__mainimg img {
+        position: relative;
+        margin-right: 0;
+        width: 261px;
+    }
+
+    .becomepartner .becomepartner__left .title {
+        font-size: 24px;
+        line-height: 130%;
+        margin-bottom: 12px;
+    }
+
+    .becomepartner .becomepartner__left p {
+        font-size: 16px;
+    }
+    .omisoftlogoslider-wrap {
+        padding: 80px 0 40px;
+    }
+
+
+    .becomepartner__mainimg {
+        display: block;
+        text-align: right;
+    }
+
+
+    .becomepartner__svgel {
+        right: 0;
+        width: calc(100% - 20px);
+    }
+
+    .sfaqsect.sfaqsect__partner {
+        padding-top: 110px;
+    }
+
+
+    .herosection-partners__descr p {
+        font-size: 14px;
+    }
+
+    .white-arrbtn {
+        width: 100%;
+    }
+    
+}
+
+
+
+
+
+
+
+.becomepartner {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+// .gradient-bg {
+//     display: none;
+// }
