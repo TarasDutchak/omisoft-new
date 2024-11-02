@@ -178,38 +178,7 @@
 
 
 
-        // ----------------------testimonials----------------------
-        if ($('.testim-centered').length) {
-            var swiper = new Swiper(".testim-centered", {
-                slidesPerView: 1.1,
-                spaceBetween: 0,
-                centeredSlides: true,
-                loop: true,
-                speed: 1000,
-
-                navigation: {
-                    nextEl: ".swiper-button-next-t",
-                    prevEl: ".swiper-button-prev-t",
-                },
-
-                pagination: {
-                    el: ".swiper-pagination",
-                },
-
-                breakpoints: {
-                    400: {
-                        slidesPerView: 1.4,
-                    },
-                    576: {
-                        slidesPerView: 1.5,
-                    },
-                    1400: {
-                        slidesPerView: 2.4,
-                    },
-
-                },
-            });
-        }
+       
 
         // ----------------------Auto tabs----------------------
 

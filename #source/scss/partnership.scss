@@ -4,7 +4,7 @@
     padding: 60px 0;
     position: relative;
     font-family: "PT Sans", sans-serif;
-   
+
 
     .gradient-bg {
         height: 100%;
@@ -119,4 +119,396 @@
         line-height: 130%;
         color: var(--dark);
     }
+}
+
+.whypartnerswithus {
+    padding: 160px 0 60px;
+
+    h2 {
+        margin-bottom: 60px;
+    }
+}
+
+.whypartnerswithus__box {
+    padding: 40px;
+    min-height: 180px;
+    background: var(--dark);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    border-radius: 20px;
+
+    .imgwrap {
+        width: 100%;
+        max-width: 44px;
+        flex: 0 0 44px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .descrwrap {
+        width: 100%;
+        max-width: calc(100% - 44px);
+        flex: 0 0 calc(100% - 44px);
+        padding-left: 40px;
+
+        h6 {
+            margin-bottom: 16px;
+            color: var(--lime);
+            font-size: 24px;
+            line-height: 130%;
+            font-family: 'PowerGrotesk';
+            font-weight: 500;
+        }
+
+        p {
+            margin: 0;
+            color: var(--dark-grey);
+            font-size: 16px;
+        }
+    }
+}
+
+.patnership .serv-testimonials {
+    margin-bottom: 0 !important;
+    padding: 80px 0 160px;
+}
+
+.waystocollaborate {
+    background: #fff;
+    border-radius: 20px;
+    padding: 120px 0 40px 0;
+    height: 600px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(#000, 0.2);
+        border-radius: 10px;
+    }
+
+    .sn3 {
+        position: sticky;
+        top: 0;
+    }
+}
+
+.waystocollaborate__box {
+    padding-left: 100px;
+    position: relative;
+    margin-bottom: 154px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .number {
+        position: absolute;
+        left: 0;
+        top: -10px;
+        background: #fff;
+        color: #CFD1CC;
+        font-size: 60px;
+        line-height: 110%;
+        font-family: 'PowerGrotesk';
+        font-weight: 500;
+        z-index: 1;
+        display: inline-block;
+        width: 80px;
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 16px;
+        color: var(--dark);
+        font-size: 24px;
+        line-height: 130%;
+        font-family: 'PowerGrotesk';
+        font-weight: 500;
+    }
+
+    .descr {
+        max-width: 460px;
+
+        p {
+            color: var(--dark-grey);
+            font-size: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: calc(100% + 154px);
+        position: absolute;
+        left: 40px;
+        top: 0;
+        background: #CFD1CC;
+    }
+
+    &:last-child {
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.sliderpartnerwrap {
+    padding: 100px 0;
+
+    .partnerslider {
+        .swiper-slide {
+            width: auto;
+
+            .brandblock {
+                height: 40px;
+                display: flex;
+                align-items: center;
+                padding: 0 30px;
+                opacity: 0.5;
+            }
+
+            img {
+                max-height: 40px;
+            }
+        }
+    }
+
+    .swiper-wrapper {
+        transition-timing-function: linear;
+        // justify-content: center;
+    }
+}
+
+// ---
+.becomepartner-sect {
+    padding: 64px 0 0 0;
+}
+
+.becomepartner {
+    position: relative;
+
+    .becomepartner__left {
+        padding: 100px 0 0 100px;
+        min-height: 470px;
+
+        p {
+            color: #CFD1CC;
+            font-size: 20px;
+            margin-bottom: 40px;
+
+            a {
+                color: var(--lime);
+            }
+        }
+
+        .title {
+            color: #fff;
+            font-size: 48px;
+            line-height: 120%;
+            font-family: 'PowerGrotesk';
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(20, 20, 20, 0.4);
+        width: 100%;
+        height: 100%;
+        -webkit-backdrop-filter: blur(50px);
+        backdrop-filter: blur(50px);
+        border-radius: 16px;
+    }
+
+    &>.row {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.becomepartner__mainimg {
+    position: absolute;
+    right: 44px;
+    bottom: 0;
+    z-index: 3;
+}
+
+.becomepartner__svgel {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+}
+
+.omisoftlogoslider-wrap {
+    padding: 160px 0 100px;
+}
+
+.omisoftlogoslider-wrap {
+    .omisoftlogoslider {
+        .swiper-slide {
+            width: auto;
+
+            .brandblock {
+                height: 66px;
+                display: flex;
+                align-items: center;
+                padding: 0 30px;
+                opacity: 0.5;
+            }
+
+            img {
+                max-height: 66px;
+            }
+        }
+    }
+
+    .swiper-wrapper {
+        transition-timing-function: linear;
+        justify-content: center;
+    }
+}
+
+.becomepartner__mainimg {
+    max-width: 450px;
+}
+
+
+
+
+@media(max-width:1599.8px) {
+    .heroimgsect {
+        right: calc((100vw - 1224px) / 2);
+    }
+}
+
+@media(max-width:1399.8px) {
+    .heroimgsect {
+        right: -40px;
+    }
+
+    .herosection-partners {
+        overflow: hidden;
+    }
+
+    .whypartnerswithus {
+        padding: 140px 0 60px;
+    }
+
+    .whypartnerswithus h2 {
+        font-size: 48px;
+    }
+
+    .whypartnerswithus__box .descrwrap {
+        padding-left: 20px;
+    }
+
+    .whypartnerswithus__box {
+        min-height: 200px;
+    }
+
+    .patnership .serv-testimonials {
+        padding-bottom: 140px;
+    }
+
+    .becomepartner .becomepartner__left {
+        padding: 100px 0 0 88px;
+    }
+
+    .becomepartner__mainimg {
+        right: -10px;
+    }
+
+    .sfaqsect.sfaqsect__partner {
+        padding-top: 140px;
+    }
+
+    .omisoftlogoslider-wrap {
+        padding-top: 120px;
+    }
+
+}
+
+@media(max-width:1199.8px) {
+    .herosection-partners__descr h1 {
+        font-size: 50px;
+    }
+
+    .countbox {
+        width: 140px;
+    }
+
+    .heroimgsect {
+        width: 730px;
+        height: auto;
+
+        img {
+            vertical-align: top;
+        }
+    }
+
+    .heroimgsect .svgpic {
+        width: 690px;
+    }
+
+    .countbox .count-number {
+        font-size: 48px;
+    }
+
+    .sectcount {
+        padding: 40px 0;
+    }
+
+    .whypartnerswithus__box {
+        min-height: 230px;
+    }
+
+    .becomepartner .becomepartner__left {
+        padding-top: 80px;
+    }
+
+    .becomepartner__svgel {
+       width: 550px;
+    }
+
+  
+
+
+
+    .countbox p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.gradient-bg {
+    display: none;
 }

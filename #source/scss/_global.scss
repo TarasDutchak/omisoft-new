@@ -14,6 +14,20 @@
 .blackbg {
     background: var(--black100);
     font-family: "PT Sans", sans-serif;
+
+    h2,
+    h3 {
+        font-family: 'PowerGrotesk';
+        font-weight: 500;
+    }
+
+    .sn3 {
+        font-family: 'PowerGrotesk';
+        font-weight: 500;
+        color: var(--dark);
+        font-size: 48px;
+        line-height: 120%;
+    }
 }
 
 
@@ -626,3 +640,4 @@ h2,
 a {
     color: #00ff95;
 }
+
