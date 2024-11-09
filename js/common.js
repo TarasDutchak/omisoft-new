@@ -192,11 +192,11 @@
         // SELECT 2
         if ($('.selectwrap__img').length) {
             var isoCountries = [
-                { id: '', text: 'Select Messenger', img: '../images/contacts/tg-green.svg' }, // картинка за замовчуванням
-                { id: '1', text: 'Telegram', img: '../images/contacts/tg-green.svg' },
-                { id: '2', text: 'WhatsApp', img: '../images/contacts/wa-green.svg' },
-                { id: '3', text: 'WeChat', img: '../images/contacts/wc-green.svg' },
-                { id: '4', text: 'Skype', img: '../images/contacts/sc-green.svg' },
+                { id: '', text: 'Select Messenger', img: 'images/contacts/tg-green.svg' }, // картинка за замовчуванням
+                { id: '1', text: 'Telegram', img: 'images/contacts/tg-green.svg' },
+                { id: '2', text: 'WhatsApp', img: 'images/contacts/wa-green.svg' },
+                { id: '3', text: 'WeChat', img: 'images/contacts/wc-green.svg' },
+                { id: '4', text: 'Skype', img: 'images/contacts/sc-green.svg' },
             ];
 
             function formatCountry(country) {
