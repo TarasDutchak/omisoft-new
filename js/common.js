@@ -198,6 +198,7 @@
                 { id: '3', text: 'WeChat', img: 'images/contacts/wc-green.svg' },
                 { id: '4', text: 'Skype', img: 'images/contacts/sc-green.svg' },
             ];
+            
 
             function formatCountry(country) {
                 if (!country.id) { return country.text; }
@@ -219,7 +220,7 @@
             // Встановлення фону за замовчуванням
             var $rendered = $('.select2-selection__rendered');
             $rendered.css({
-                'background-image': 'url(../images/contacts/tg-green.svg)',
+                'background-image': 'url(images/contacts/tg-green.svg)',
                 'background-repeat': 'no-repeat',
                 'background-position': 'right 26px center',
                 'background-size': '20px 20px'
