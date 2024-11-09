@@ -554,6 +554,7 @@ h2,
 
 // Баттон
 .button-container-1 {
+    display: inline-flex;
     position: relative;
     width: 200px;
     height: 47px;
@@ -565,9 +566,14 @@ h2,
     font-size: 18px;
     font-weight: 700;
     font-family: "PT Sans", sans-serif;
+
+    &.darkbtn {
+        // #0F0F10
+        // color: #fff;
+    }
 }
 
-.button-container-1 button {
+.button-container-1 .masshover {
     width: 100%;
     height: 100%;
     font-size: 18px;
@@ -575,8 +581,8 @@ h2,
     font-family: "PT Sans", sans-serif;
     font-weight: bold;
     background: #fff;
-    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
-    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask: url("../images/general/nature-sprite.png");
+    mask: url("../images/general/nature-sprite.png");
     -webkit-mask-size: 2300% 100%;
     mask-size: 2300% 100%;
     border: none;
@@ -591,7 +597,7 @@ h2,
     justify-content: center;
 }
 
-.button-container-1 button:hover {
+.button-container-1 .masshover:hover {
     -webkit-animation: ani 0.7s steps(22) forwards;
     animation: ani 0.7s steps(22) forwards;
 }
@@ -611,6 +617,14 @@ h2,
     height: 100%;
     width: 100%;
     background: #CDF765;
+}
+
+
+.button-container-1.darkbtn .masshover {
+    background: #0F0F10;
+    color: #fff;
+    border: 1px solid var(--lime);
+    border-radius: 8px;
 }
 
 @-webkit-keyframes ani {

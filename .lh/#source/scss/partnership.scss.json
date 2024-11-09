@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 290,
+            "activePatchIndex": 293,
             "patches": [
                 {
                     "date": 1730384484527,
@@ -1168,6 +1168,18 @@
                 {
                     "date": 1730541211848,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -805,8 +805,11 @@\n \n     .becomepartner .becomepartner__left p {\n         font-size: 16px;\n     }\n+    .omisoftlogoslider-wrap {\n+        padding: 80px 0 40px;\n+    }\n \n \n     .becomepartner__mainimg {\n         display: block;\n@@ -819,9 +822,9 @@\n         width: calc(100% - 20px);\n     }\n \n     .sfaqsect.sfaqsect__partner {\n-        padding-top: 100px;\n+        padding-top: 110px;\n     }\n \n \n     .herosection-partners__descr p {\n@@ -830,8 +833,9 @@\n \n     .white-arrbtn {\n         width: 100%;\n     }\n+    \n }\n \n \n \n"
+                },
+                {
+                    "date": 1731139993802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -424,8 +424,12 @@\n .becomepartner__mainimg img {\n     max-width: 450px;\n }\n \n+.serv-testimonials   .button-container-1 {\n+    max-width: 250px;\n+    width: 100%;\n+}\n \n @media(max-width:1599.8px) {\n     .heroimgsect {\n         right: calc((100vw - 1224px) / 2);\n"
+                },
+                {
+                    "date": 1731140017533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -424,9 +424,9 @@\n .becomepartner__mainimg img {\n     max-width: 450px;\n }\n \n-.serv-testimonials   .button-container-1 {\n+.serv-testimonials .button-container-1 {\n     max-width: 250px;\n     width: 100%;\n }\n \n@@ -748,8 +748,12 @@\n     .becomepartner__svgel {\n         right: 50px;\n     }\n \n+    \n+.serv-testimonials .button-container-1 {\n+    max-width: 320px;\n+}\n \n \n     .becomepartner .becomepartner__left .title,\n     .sfaqsect .stitle,\n"
+                },
+                {
+                    "date": 1731140023407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -750,9 +750,9 @@\n     }\n \n     \n .serv-testimonials .button-container-1 {\n-    max-width: 320px;\n+    max-width: 335px;\n }\n \n \n     .becomepartner .becomepartner__left .title,\n"
                 }
             ],
             "date": 1730384484527,

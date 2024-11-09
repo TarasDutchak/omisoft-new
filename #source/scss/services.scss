@@ -1020,6 +1020,12 @@
     margin-bottom: 40px;
 }
 
+.serv-testimonials {
+    .button-container-1 {
+        width: 250px;
+    }
+}
+
 @media(max-width:1599.8px) {
     .techslbox {
         padding-left: 30px;
@@ -1924,6 +1930,13 @@
     
     .techstacksect .section-subtitle {
         font-size: 16px;
+    }
+
+    .serv-testimonials {
+        .button-container-1 {
+            width: 100%;
+            max-width: 335px;
+        }
     }
 }
 

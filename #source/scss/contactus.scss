@@ -64,35 +64,6 @@
         color: var(--dark-grey);
     }
 
-    .ccontact-section__count {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        max-width: 418px;
-        margin-bottom: 160px;
-
-        .item {
-            width: 100%;
-            max-width: 94px;
-            flex: 0 0 94px;
-
-            span {
-                display: block;
-                color: var(--lime);
-                font-size: 40px;
-                font-weight: 500;
-                font-family: 'PowerGrotesk';
-            }
-
-            p {
-                margin: 0;
-                color: var(--dark-grey);
-                font-size: 14px;
-                line-height: 140%;
-            }
-        }
-    }
-
     ul {
         li {
             margin-bottom: 32px;
@@ -125,6 +96,35 @@
         }
     }
 
+}
+
+.ccontact-section__count {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 418px;
+    margin-bottom: 160px;
+
+    .item {
+        width: 100%;
+        max-width: 94px;
+        flex: 0 0 94px;
+
+        span {
+            display: block;
+            color: var(--lime);
+            font-size: 40px;
+            font-weight: 500;
+            font-family: 'PowerGrotesk';
+        }
+
+        p {
+            margin: 0;
+            color: var(--dark-grey);
+            font-size: 14px;
+            line-height: 140%;
+        }
+    }
 }
 
 .ccontact-section__tabheader {
@@ -442,6 +442,10 @@
             padding-right: 39px;
         }
     }
+
+    &.hide {
+        display: none;
+    }
 }
 
 .shedulebox {
@@ -450,7 +454,7 @@
         height: 130px;
         border-radius: 50%;
         overflow: hidden;
-        background: #fff;
+        background: #232222;
         border: 4px solid var(--lime);
         margin-bottom: 40px;
     }
@@ -525,6 +529,14 @@
         }
     }
 
+}
+
+.ccontact-section__tabcontent .button-container-1 {
+    width: 100%;
+}
+
+.ccontact-section__count.mob {
+    display: none;
 }
 
 @media(max-width:1399.8px) {
@@ -765,6 +777,20 @@
 
     .ccontact-section__imgs {
         padding: 0 12px;
+    }
+
+    .ccontact-section__left .ccontact-section__count {
+        display: none;
+    }
+
+    .ccontact-section__count{
+        display: none;
+
+        &.mob  {
+            padding: 40px 12px 0 12px;
+            display: flex;
+            margin-bottom: 0;
+        }
     }
 }
 
