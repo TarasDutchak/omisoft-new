@@ -419,7 +419,7 @@
     align-items: center;
 
     a {
-        filter: grayscale(1);
+        // filter: grayscale(1);
         transition: 0.3s;
 
         img {
@@ -504,6 +504,11 @@
         font-family: "PT Sans", sans-serif;
         margin-bottom: 20px;
         cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background: var(--lime);
+        }
     }
 
     .contacttext {
@@ -537,6 +542,12 @@
 
 .ccontact-section__count.mob {
     display: none;
+}
+
+@media(max-width:1440.8px) {
+    .ccontact-section {
+        padding: 160px 0 160px;
+    }
 }
 
 @media(max-width:1399.8px) {
@@ -668,6 +679,10 @@
         }
     }
 
+    .ccontact-section__left .ccontact-section__count {
+        margin-bottom: 90px;
+    }
+
 }
 
 @media(max-width:767.8px) {
@@ -678,6 +693,26 @@
 
     .ccontact-section__tabcontent .row.shedrow .col-md-6:nth-child(1) {
         margin-bottom: 50px;
+    }
+
+    .ccontact-section__left .ccontact-section__count {
+        display: none;
+    }
+
+    .ccontact-section__count.mob {
+        display: flex;
+        padding-top: 40px;
+        justify-content: space-between;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .ccontact-section__left .description {
+        margin-bottom: 0;
+    }
+
+    .ccontact-section__left {
+        margin-bottom: 40px;
     }
 }
 
@@ -750,10 +785,6 @@
 
     .ccontact-section__left ul li a img {
         width: 24px;
-    }
-
-    .ccontact-section__left {
-        margin-bottom: 120px;
     }
 
     .ccontact-section__tabheader button {

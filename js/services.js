@@ -1,30 +1,4 @@
-// if (document.querySelector('.gradient-bg')) {
 
-//     const interBubbles = document.querySelectorAll('.interactive'); // Знаходимо всі елементи з класом 'interactive'
-
-//     interBubbles.forEach((interBubble) => {
-//         let curX = 0;
-//         let curY = 0;
-//         let tgX = 0;
-//         let tgY = 0;
-
-//         // Анімація для кожного interactive елемента
-//         const move = () => {
-//             curX += (tgX - curX) / 20;
-//             curY += (tgY - curY) / 20;
-//             interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
-//             requestAnimationFrame(move);
-//         };
-
-//         window.addEventListener('mousemove', (event) => {
-//             tgX = event.clientX;
-//             tgY = event.clientY;
-//         });
-
-//         move(); // Запуск анімації
-//     });
-
-// }
 
 (function ($) {
 
@@ -52,45 +26,6 @@
 
 
         // ----------------------Success stories----------------------
-        // if ($('.card').length) {
-        //     const cardsbox = document.querySelectorAll('.card');
-
-        //     cardsbox.forEach((cardsbox, index) => {
-        //         cardsbox.style.zIndex = index + 1; // Призначаємо кожному наступному більший z-index
-        //         cardsbox.style.paddingTop = `${20 * (index + 1)}px`; // Збільшуємо padding-top на 20px для кожного наступного
-        //     });
-        // }
-
-        // if ($('.card').length) {
-        //     const cardsbox = document.querySelectorAll('.card');
-
-        //     cardsbox.forEach((card, index) => {
-        //         if (index === 0) {
-        //             card.style.top = '130px'; // Перший елемент отримує top 100px
-        //         } else {
-        //             card.style.top = `${130 + 10 * index}px`; // Наступним додаємо по 20px до top
-        //         }
-        //         // card.style.position = 'relative'; // Встановлюємо позицію відносно, щоб працював top
-        //         card.style.zIndex = index + 1; // Призначаємо кожному наступному більший z-index
-        //     });
-        // }
-
-        // if ($('.card').length) {
-        //     const cardsbox = document.querySelectorAll('.card');
-
-        //     cardsbox.forEach((card, index) => {
-        //         if (index === 0) {
-        //             card.style.top = '130px'; // Перший елемент отримує top 130px
-        //         } else if (index === 1) {
-        //             card.style.top = '295px'; // Другий елемент отримує top 230px
-        //         } else {
-        //             card.style.top = `${295 + 10 * (index - 1)}px`; // Наступним додаємо по 10px до top
-        //         }
-        //         card.style.zIndex = index + 1; // Призначаємо кожному наступному більший z-index
-        //     });
-        // }
-
-
 
         if ($('.card').length) {
             const cardsbox = document.querySelectorAll('.card');
@@ -246,10 +181,10 @@
                 freeMode: true,
                 loop: true,
                 speed: 1000,
-                // autoplay: {
-                //     delay: 2000,
-                //     disableOnInteraction: false,
-                // },
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
                 breakpoints: {
                     480: {
                         slidesPerView: 2.2,
@@ -341,20 +276,6 @@
         setHoverCardBehavior();
 
         window.addEventListener('resize', setHoverCardBehavior);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     })
 

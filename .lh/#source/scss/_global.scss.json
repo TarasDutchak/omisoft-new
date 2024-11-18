@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 95,
+            "activePatchIndex": 101,
             "patches": [
                 {
                     "date": 1729686239692,
@@ -388,6 +388,30 @@
                 {
                     "date": 1731138478416,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -580,10 +580,10 @@\n     font-weight: 700;\r\n     font-family: \"PT Sans\", sans-serif;\r\n     font-weight: bold;\r\n     background: #fff;\r\n-    -webkit-mask: url(\"https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png\");\r\n-    mask: url(\"https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png\");\r\n+    -webkit-mask: url(\"../images/general/nature-sprite.png\");\r\n+    mask: url(\"../images/general/nature-sprite.png\");\r\n     -webkit-mask-size: 2300% 100%;\r\n     mask-size: 2300% 100%;\r\n     border: none;\r\n     color: var(--dark);\r\n@@ -623,9 +623,9 @@\n .button-container-1.darkbtn .masshover {\r\n     background: #0F0F10;\r\n     color: #fff;\r\n     border: 1px solid var(--lime);\r\n-    border-radius: 5px;\r\n+    border-radius: 8px;\r\n }\r\n \r\n @-webkit-keyframes ani {\r\n     from {\r\n"
+                },
+                {
+                    "date": 1731931218487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -309,8 +309,12 @@\n     img {\r\n         margin-left: 4px;\r\n         margin-top: -1px;\r\n     }\r\n+\r\n+    &:hover {\r\n+        background: var(--lime);\r\n+    }\r\n }\r\n \r\n .greenborder-btn {\r\n     height: 44px;\r\n"
+                },
+                {
+                    "date": 1731931255633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -304,8 +304,9 @@\n     color: var(--dark);\r\n     font-size: 18px;\r\n     font-weight: 700;\r\n     font-family: \"PT Sans\", sans-serif;\r\n+    transition: 0.5s;\r\n \r\n     img {\r\n         margin-left: 4px;\r\n         margin-top: -1px;\r\n"
+                },
+                {
+                    "date": 1731931309856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -330,14 +330,18 @@\n     color: #fff;\r\n     font-size: 16px;\r\n     font-family: \"PT Sans\", sans-serif;\r\n     font-weight: 700;\r\n+    transition: 0.5s;\r\n \r\n-\r\n     img {\r\n         margin-left: 4px;\r\n         margin-top: -1px;\r\n     }\r\n+\r\n+    &:hover {\r\n+        background: var(--lime);\r\n+    }\r\n }\r\n \r\n .text-center {\r\n     text-align: center;\r\n"
+                },
+                {
+                    "date": 1731931331118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -339,8 +339,9 @@\n     }\r\n \r\n     &:hover {\r\n         background: var(--lime);\r\n+        color: var(--dark);\r\n     }\r\n }\r\n \r\n .text-center {\r\n"
+                },
+                {
+                    "date": 1731931342436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -340,8 +340,12 @@\n \r\n     &:hover {\r\n         background: var(--lime);\r\n         color: var(--dark);\r\n+\r\n+        img {\r\n+            filter: brightness(0);\r\n+        }\r\n     }\r\n }\r\n \r\n .text-center {\r\n"
+                },
+                {
+                    "date": 1731931354164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -330,13 +330,14 @@\n     color: #fff;\r\n     font-size: 16px;\r\n     font-family: \"PT Sans\", sans-serif;\r\n     font-weight: 700;\r\n-    transition: 0.5s;\r\n+    transition: 0.3s;\r\n \r\n     img {\r\n         margin-left: 4px;\r\n         margin-top: -1px;\r\n+        transition: 0.5s;\r\n     }\r\n \r\n     &:hover {\r\n         background: var(--lime);\r\n"
                 }
             ],
             "date": 1729686239692,
