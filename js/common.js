@@ -190,58 +190,60 @@
 
 
         // SELECT 2
-        if ($('.selectwrap__img').length) {
-            var isoCountries = [
-                { id: '', text: 'Select Messenger', img: 'images/contacts/tg-green.svg' }, // картинка за замовчуванням
-                { id: '1', text: 'Telegram', img: 'images/contacts/tg-green.svg' },
-                { id: '2', text: 'WhatsApp', img: 'images/contacts/wa-green.svg' },
-                { id: '3', text: 'WeChat', img: 'images/contacts/wc-green.svg' },
-                { id: '4', text: 'Skype', img: 'images/contacts/sc-green.svg' },
-            ];
+        // if ($('.selectwrap__img').length) {
+        //     var isoCountries = [
+        //         { id: '', text: 'Select Messenger', img: 'images/contacts/tg-green.svg' }, // картинка за замовчуванням
+        //         { id: '1', text: 'Telegram', img: 'images/contacts/tg-green.svg' },
+        //         { id: '2', text: 'WhatsApp', img: 'images/contacts/wa-green.svg' },
+        //         { id: '3', text: 'WeChat', img: 'images/contacts/wc-green.svg' },
+        //         { id: '4', text: 'Skype', img: 'images/contacts/sc-green.svg' },
+        //     ];
             
 
-            function formatCountry(country) {
-                if (!country.id) { return country.text; }
-                var $country = $(
-                    `<span class='selimg' style="background-image:url(${country.img}); width:20px; height:20px; display:inline-block; background-size:contain; background-repeat:no-repeat; vertical-align:middle; margin-right:8px;"></span>` +
-                    `<span>${country.text}</span>`
-                );
-                return $country;
-            };
+        //     function formatCountry(country) {
+        //         if (!country.id) { return country.text; }
+        //         var $country = $(
+        //             `<span class='selimg' style="background-image:url(${country.img}); width:20px; height:20px; display:inline-block; background-size:contain; background-repeat:no-repeat; vertical-align:middle; margin-right:8px;"></span>` +
+        //             `<span>${country.text}</span>`
+        //         );
+        //         return $country;
+        //     };
 
-            var $select = $("[name='socselect']").select2({
-                placeholder: "Your preferred messenger",
-                templateResult: formatCountry,
-                data: isoCountries,
-                minimumResultsForSearch: -1
-            });
-            $select.data('select2').$dropdown.addClass('socselectdd');
+        //     var $select = $("[name='socselect']").select2({
+        //         placeholder: "Your preferred messenger",
+        //         templateResult: formatCountry,
+        //         data: isoCountries,
+        //         minimumResultsForSearch: -1
+        //     });
+        //     $select.data('select2').$dropdown.addClass('socselectdd');
 
-            // Встановлення фону за замовчуванням
-            var $rendered = $('.select2-selection__rendered');
-            $rendered.css({
-                'background-image': 'url(images/contacts/tg-green.svg)',
-                'background-repeat': 'no-repeat',
-                'background-position': 'right 26px center',
-                'background-size': '20px 20px'
-            });
+        //     // Встановлення фону за замовчуванням
+        //     var $rendered = $('.select2-selection__rendered');
+        //     $rendered.css({
+        //         'background-image': 'url(images/contacts/tg-green.svg)',
+        //         'background-repeat': 'no-repeat',
+        //         'background-position': 'right 26px center',
+        //         'background-size': '20px 20px'
+        //     });
 
-            // Змінюємо іконку при зміні вибору
-            $select.on('change', function () {
-                var selectedOption = isoCountries.find(option => option.id === $select.val());
+        //     // Змінюємо іконку при зміні вибору
+        //     $select.on('change', function () {
+        //         var selectedOption = isoCountries.find(option => option.id === $select.val());
 
-                if (selectedOption && selectedOption.img) {
-                    $rendered.css({
-                        'background-image': 'url(' + selectedOption.img + ')'
-                    });
-                } else {
-                    // Повернення до іконки за замовчуванням, якщо вибір порожній
-                    $rendered.css({
-                        'background-image': 'url(../images/contacts/tg-green.svg)'
-                    });
-                }
-            });
-        }
+        //         if (selectedOption && selectedOption.img) {
+        //             $rendered.css({
+        //                 'background-image': 'url(' + selectedOption.img + ')'
+        //             });
+        //         } else {
+        //             // Повернення до іконки за замовчуванням, якщо вибір порожній
+        //             $rendered.css({
+        //                 'background-image': 'url(../images/contacts/tg-green.svg)'
+        //             });
+        //         }
+        //     });
+        // }
+
+        
         // section animation
         if (document.querySelector('.gradient-bg')) {
 
