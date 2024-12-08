@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 46,
+            "activePatchIndex": 48,
             "patches": [
                 {
                     "date": 1727259976394,
@@ -192,6 +192,14 @@
                 {
                     "date": 1733473616069,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -241,8 +241,10 @@\n         //             });\r\n         //         }\r\n         //     });\r\n         // }\r\n+\r\n+        \r\n         // section animation\r\n         if (document.querySelector('.gradient-bg')) {\r\n \r\n             const interBubbles = document.querySelectorAll('.interactive'); // Знаходимо всі елементи з класом 'interactive'\r\n"
+                },
+                {
+                    "date": 1733647010984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -312,9 +312,63 @@\n             });\r\n         }\r\n \r\n \r\n+        \r\n+        //    Header - solution\r\n+        if ($(\".solhead__cat\").length > 0) {\r\n+            document.querySelector(\".solhead__cat ul\").addEventListener(\"wheel\", function (event) {\r\n+                event.preventDefault();\r\n+                this.scrollLeft += event.deltaY;\r\n+            });\r\n+        }\r\n \r\n+        // Отримуємо всі елементи <li> і таби\r\n+        const tabItems = document.querySelectorAll('.solhead__cat li');\r\n+        const tabs = document.querySelectorAll('.solhead_tab');\r\n \r\n+        // Додаємо слухач кліку для кожного елемента списку\r\n+        if (tabItems.length && tabs.length) {\r\n+            tabItems.forEach((item, index) => {\r\n+                item.addEventListener('click', () => {\r\n+                    // Видаляємо активний стан з усіх елементів списку та табів\r\n+                    tabItems.forEach(li => li.classList.remove('active'));\r\n+                    tabs.forEach(tab => tab.classList.remove('active'));\r\n+\r\n+                    // Додаємо активний стан до натиснутого елемента і відповідного табу\r\n+                    item.classList.add('active');\r\n+                    if (tabs[index]) {\r\n+                        tabs[index].classList.add('active');\r\n+                    }\r\n+                });\r\n+            });\r\n+        }\r\n+\r\n+        var swiper = new Swiper(\".headsol\", {\r\n+            slidesPerView: 1.5,\r\n+            spaceBetween: 20,\r\n+            breakpoints: {\r\n+                575: {\r\n+                    slidesPerView: 2.5,\r\n+                },\r\n+                768: {\r\n+                    slidesPerView: 3,\r\n+                },\r\n+                991: {\r\n+                    slidesPerView: 4,\r\n+                },\r\n+            },\r\n+        });\r\n+\r\n+        // моб меню\r\n+        $('.mobsolitem').click(function () {\r\n+            $(this).next('.solhead_tab').toggle();\r\n+            $(this).toggleClass('rotate');\r\n+        });\r\n+\r\n+\r\n+\r\n+\r\n+\r\n     });\r\n \r\n }(jQuery)); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1733647025090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -342,9 +342,9 @@\n                 });\r\n             });\r\n         }\r\n \r\n-        var swiper = new Swiper(\".headsol\", {\r\n+        var swipersol = new Swiper(\".headsol\", {\r\n             slidesPerView: 1.5,\r\n             spaceBetween: 20,\r\n             breakpoints: {\r\n                 575: {\r\n"
                 }
             ],
             "date": 1727259976394,

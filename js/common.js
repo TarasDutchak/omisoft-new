@@ -313,6 +313,60 @@
         }
 
 
+        
+        //    Header - solution
+        if ($(".solhead__cat").length > 0) {
+            document.querySelector(".solhead__cat ul").addEventListener("wheel", function (event) {
+                event.preventDefault();
+                this.scrollLeft += event.deltaY;
+            });
+        }
+
+        // Отримуємо всі елементи <li> і таби
+        const tabItems = document.querySelectorAll('.solhead__cat li');
+        const tabs = document.querySelectorAll('.solhead_tab');
+
+        // Додаємо слухач кліку для кожного елемента списку
+        if (tabItems.length && tabs.length) {
+            tabItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    // Видаляємо активний стан з усіх елементів списку та табів
+                    tabItems.forEach(li => li.classList.remove('active'));
+                    tabs.forEach(tab => tab.classList.remove('active'));
+
+                    // Додаємо активний стан до натиснутого елемента і відповідного табу
+                    item.classList.add('active');
+                    if (tabs[index]) {
+                        tabs[index].classList.add('active');
+                    }
+                });
+            });
+        }
+
+        var swipersol = new Swiper(".headsol", {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+            breakpoints: {
+                575: {
+                    slidesPerView: 2.5,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                991: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+
+        // моб меню
+        $('.mobsolitem').click(function () {
+            $(this).next('.solhead_tab').toggle();
+            $(this).toggleClass('rotate');
+        });
+
+
+
 
 
     });

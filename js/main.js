@@ -21,10 +21,6 @@
             $(this).addClass('active');
         });
 
-
-
-
-
         // Projects
         // const swiperpr = new Swiper('.projbtns', {
         //     slidesPerView: "auto",
@@ -159,10 +155,6 @@
                 },
             },
         });
-
-       
-
-
 
 
     });

@@ -56,6 +56,8 @@ header.header {
                 -webkit-text-fill-color: transparent;
                 background-size: 220% 100%;
                 transition: background-position 0.5s ease;
+                font-family: "PT Sans", sans-serif;
+                font-weight: 400;
 
                 &:hover {
                     background-position: 100%;
@@ -80,6 +82,8 @@ header.header {
                     }
 
                     &.rotate {
+                        font-weight: 600;
+
                         &::after {
                             transform: rotate(-180deg);
                         }
@@ -96,12 +100,16 @@ header.header {
     justify-content: center;
     min-height: 46px;
     width: 100%;
-    max-width: 147px;
+    max-width: 186px;
     border: 1px solid var(--lime);
-    color: var(--lime);
+    color: #fff;
     font-weight: 700;
     line-height: 120%;
     transition: 0.3s;
+    font-family: "PT Sans", sans-serif;
+    background: #0F0F10;
+    border-radius: 8px;
+
 
     img {
         margin-left: 6px;
@@ -153,7 +161,8 @@ header.header {
 
         .header__contactlink {
             color: var(--black100);
-            border: 1px solid var(--black100);
+            border: 1px solid var(--lime);
+            background: var(--lime);
         }
 
 
@@ -427,10 +436,158 @@ header.scroll {
 }
 
 
+// solution
+
+.solhead-topsect {
+    display: flex;
+    align-items: center;
+
+    .title {
+        width: 100%;
+        max-width: 288px;
+        flex: 0 0 288px;
+        margin: 0;
+        color: #141414;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: 'PowerGrotesk';
+    }
+
+    .solhead__cat {
+        width: 100%;
+        max-width: calc(100% - 288px);
+        flex: 0 0 calc(100% - 288px);
+        text-align: left;
+
+        ul {
+            display: flex;
+            white-space: nowrap;
+            overflow: auto;
+
+            li {
+                display: inline-block;
+                padding: 8px 10px;
+                border-radius: 8px;
+                color: #141414;
+                font-size: 18px;
+                line-height: 135%;
+                cursor: pointer;
+                font-family: "PT Sans", sans-serif;
+                margin-right: 14px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover,
+                &.active {
+                    background: #EDEFEE;
+                }
+            }
+
+            &::-webkit-scrollbar {
+                height: 6px;
+            }
+
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--lime);
+                border-radius: 6px;
+            }
+        }
+    }
+}
+
+.solhead_tab {
+    display: none;
+}
+
+.solhead_tab.active {
+    display: block;
+}
+
+.solhead-content {
+    padding-top: 36px;
+    padding-bottom: 40px;
+}
+
+.headsol__slide {
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        .headsol__img img {
+            transform: scale(1.1);
+        }
+    }
+
+    .headsol__img {
+        position: relative;
+        overflow: hidden;
+        height: 166px;
+        border-radius: 16px 16px 0 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            vertical-align: top;
+            transition: 0.5s;
+            transform: scale(1.01);
+        }
+    }
+
+    .headsol__descr {
+        padding: 20px;
+        background: #EDEFEE;
+        border-radius: 0 0 16px 16px;
+        min-height: 132px;
+
+        .title {
+            color: #141414;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: 'PowerGrotesk';
+            margin-bottom: 4px;
+            line-height: 120%;
+        }
+
+        .descr {
+            margin: 0;
+            color: #141414;
+            font-size: 14px;
+            line-height: 140%;
+            font-family: "PT Sans", sans-serif;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+}
+
+.mobsolitem {
+    display: none;
+}
+
+@media(max-width:1600.8px) {
+    .solhead-topsect .solhead__cat ul li {
+        font-size: 15px;
+    }
+}
 
 @media(max-width:1399.8px) {
     .megamenu .sidelists ul {
         padding-left: 0;
+    }
+
+    .headsol__slide .headsol__img {
+        height: 140px;
     }
 }
 
@@ -588,6 +745,68 @@ header.scroll {
         }
     }
 
+    .solhead-topsect {
+        display: none;
+    }
+
+    .mobsolitem {
+        display: block;
+        color: #141414;
+        font-size: 20px;
+        line-height: 135%;
+        font-weight: 500;
+        position: relative;
+        font-family: "PT Sans", sans-serif;
+        margin-bottom: 8px;
+        margin-bottom: 20px;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url('../images/header/mobarr.svg') no-repeat center / 100%;
+            position: absolute;
+            right: 0;
+            top: 4px;
+            transition: 0.3s;
+        }
+
+        &.rotate {
+            &::after {
+                transform: rotate(-180deg);
+            }
+        }
+
+    }
+
+    .solhead-content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .headsol__slide .headsol__descr {
+        padding: 10px 15px;
+        min-height: 105px;
+    }
+
+    .headsol__slide .headsol__descr .title {
+        font-size: 16px;
+    }
+
+    .headsol__slide .headsol__descr .descr {
+        font-size: 12px;
+    }
+
+    .solhead_tabswrap .solhead_tab  {
+        margin-bottom: 15px;
+        display: none;
+    }
+
+    .megamenu__wrapper.sol {
+        padding-bottom: 0;
+    }
+
 }
 
 @media(max-width:991.8px) {
@@ -701,6 +920,19 @@ header.scroll {
             background: var(--lime);
         }
     }
+
+
+
+
+
+
+}
+
+@media(max-width:767.8px) {
+    .solhead_tab .swiper  {
+        margin-right: -12px;
+        width: calc(100% + 12px);
+    }
 }
 
 @media(max-width:575.8px) {
@@ -733,7 +965,60 @@ header.scroll {
         height: 94px;
     }
 
+    .mobsolitem {
+        font-size: 18px;
+    }
+
+    .mobsolitem:after {
+        top: 2px;
+    }
+
+    .solhead_tabswrap {
+        padding-left: 30px;
+    }
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // -------------------------------------------------
 
@@ -813,12 +1098,6 @@ header.scroll {
 .c-text-end {
     text-align: right;
 }
-
-
-
-
-
-
 
 
 @media(min-width:576px) {
