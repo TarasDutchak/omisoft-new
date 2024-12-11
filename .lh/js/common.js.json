@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 48,
+            "activePatchIndex": 69,
             "patches": [
                 {
                     "date": 1727259976394,
@@ -200,6 +200,90 @@
                 {
                     "date": 1733647025090,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -342,9 +342,9 @@\n                 });\r\n             });\r\n         }\r\n \r\n-        var swiper = new Swiper(\".headsol\", {\r\n+        var swipersol = new Swiper(\".headsol\", {\r\n             slidesPerView: 1.5,\r\n             spaceBetween: 20,\r\n             breakpoints: {\r\n                 575: {\r\n"
+                },
+                {
+                    "date": 1733928823275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -365,10 +365,12 @@\n             $(this).toggleClass('rotate');\r\n         });\r\n \r\n \r\n+        // команда - слайдер\r\n \r\n \r\n+        teamslider\r\n \r\n     });\r\n \r\n }(jQuery)); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1733928835988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -366,11 +366,27 @@\n         });\r\n \r\n \r\n         // команда - слайдер\r\n+        \r\n+        var swipersol = new Swiper(\".teamslider\", {\r\n+            slidesPerView: 1.5,\r\n+            spaceBetween: 20,\r\n+            breakpoints: {\r\n+                575: {\r\n+                    slidesPerView: 2.5,\r\n+                },\r\n+                768: {\r\n+                    slidesPerView: 3,\r\n+                },\r\n+                991: {\r\n+                    slidesPerView: 4,\r\n+                },\r\n+            },\r\n+        });\r\n \r\n \r\n-        teamslider\r\n \r\n+\r\n     });\r\n \r\n }(jQuery)); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1733928856917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -377,10 +377,10 @@\n                 },\r\n                 768: {\r\n                     slidesPerView: 3,\r\n                 },\r\n-                991: {\r\n-                    slidesPerView: 4,\r\n+                1400: {\r\n+                    slidesPerView: 9,\r\n                 },\r\n             },\r\n         });\r\n \r\n"
+                },
+                {
+                    "date": 1733928987788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -369,9 +369,9 @@\n         // команда - слайдер\r\n         \r\n         var swipersol = new Swiper(\".teamslider\", {\r\n             slidesPerView: 1.5,\r\n-            spaceBetween: 20,\r\n+            spaceBetween: 0,\r\n             breakpoints: {\r\n                 575: {\r\n                     slidesPerView: 2.5,\r\n                 },\r\n"
+                },
+                {
+                    "date": 1733929015980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -370,8 +370,12 @@\n         \r\n         var swipersol = new Swiper(\".teamslider\", {\r\n             slidesPerView: 1.5,\r\n             spaceBetween: 0,\r\n+            autoplay: {\r\n+                delay: 2500,\r\n+                disableOnInteraction: false,\r\n+              },\r\n             breakpoints: {\r\n                 575: {\r\n                     slidesPerView: 2.5,\r\n                 },\r\n"
+                },
+                {
+                    "date": 1733929031743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -370,8 +370,10 @@\n         \r\n         var swipersol = new Swiper(\".teamslider\", {\r\n             slidesPerView: 1.5,\r\n             spaceBetween: 0,\r\n+            speed:1200;\r\n+            loop:true,\r\n             autoplay: {\r\n                 delay: 2500,\r\n                 disableOnInteraction: false,\r\n               },\r\n"
+                },
+                {
+                    "date": 1733929044599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -197,10 +197,10 @@\n         //         { id: '2', text: 'WhatsApp', img: 'images/contacts/wa-green.svg' },\r\n         //         { id: '3', text: 'WeChat', img: 'images/contacts/wc-green.svg' },\r\n         //         { id: '4', text: 'Skype', img: 'images/contacts/sc-green.svg' },\r\n         //     ];\r\n-            \r\n \r\n+\r\n         //     function formatCountry(country) {\r\n         //         if (!country.id) { return country.text; }\r\n         //         var $country = $(\r\n         //             `<span class='selimg' style=\"background-image:url(${country.img}); width:20px; height:20px; display:inline-block; background-size:contain; background-repeat:no-repeat; vertical-align:middle; margin-right:8px;\"></span>` +\r\n@@ -242,9 +242,9 @@\n         //         }\r\n         //     });\r\n         // }\r\n \r\n-        \r\n+\r\n         // section animation\r\n         if (document.querySelector('.gradient-bg')) {\r\n \r\n             const interBubbles = document.querySelectorAll('.interactive'); // Знаходимо всі елементи з класом 'interactive'\r\n@@ -312,9 +312,9 @@\n             });\r\n         }\r\n \r\n \r\n-        \r\n+\r\n         //    Header - solution\r\n         if ($(\".solhead__cat\").length > 0) {\r\n             document.querySelector(\".solhead__cat ul\").addEventListener(\"wheel\", function (event) {\r\n                 event.preventDefault();\r\n@@ -366,18 +366,18 @@\n         });\r\n \r\n \r\n         // команда - слайдер\r\n-        \r\n+\r\n         var swipersol = new Swiper(\".teamslider\", {\r\n             slidesPerView: 1.5,\r\n             spaceBetween: 0,\r\n-            speed:1200;\r\n-            loop:true,\r\n+            speed: 1500,\r\n+            loop: true,\r\n             autoplay: {\r\n                 delay: 2500,\r\n                 disableOnInteraction: false,\r\n-              },\r\n+            },\r\n             breakpoints: {\r\n                 575: {\r\n                     slidesPerView: 2.5,\r\n                 },\r\n"
+                },
+                {
+                    "date": 1733929053996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -373,9 +373,9 @@\n             spaceBetween: 0,\r\n             speed: 1500,\r\n             loop: true,\r\n             autoplay: {\r\n-                delay: 2500,\r\n+                delay: 2000,\r\n                 disableOnInteraction: false,\r\n             },\r\n             breakpoints: {\r\n                 575: {\r\n"
+                },
+                {
+                    "date": 1733929112536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -380,10 +380,10 @@\n             breakpoints: {\r\n                 575: {\r\n                     slidesPerView: 2.5,\r\n                 },\r\n-                768: {\r\n-                    slidesPerView: 3,\r\n+                1200: {\r\n+                    slidesPerView: 8,\r\n                 },\r\n                 1400: {\r\n                     slidesPerView: 9,\r\n                 },\r\n"
+                },
+                {
+                    "date": 1733929134652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -377,10 +377,10 @@\n                 delay: 2000,\r\n                 disableOnInteraction: false,\r\n             },\r\n             breakpoints: {\r\n-                575: {\r\n-                    slidesPerView: 2.5,\r\n+                992: {\r\n+                    slidesPerView: 7\r\n                 },\r\n                 1200: {\r\n                     slidesPerView: 8,\r\n                 },\r\n"
+                },
+                {
+                    "date": 1733929150801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -376,12 +376,15 @@\n             autoplay: {\r\n                 delay: 2000,\r\n                 disableOnInteraction: false,\r\n             },\r\n-            breakpoints: {\r\n+            768: {\r\n                 992: {\r\n                     slidesPerView: 7\r\n                 },\r\n+                992: {\r\n+                    slidesPerView: 7\r\n+                },\r\n                 1200: {\r\n                     slidesPerView: 8,\r\n                 },\r\n                 1400: {\r\n"
+                },
+                {
+                    "date": 1733929160094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -378,12 +378,12 @@\n                 disableOnInteraction: false,\r\n             },\r\n             768: {\r\n                 992: {\r\n-                    slidesPerView: 7\r\n+                    slidesPerView: 6,\r\n                 },\r\n                 992: {\r\n-                    slidesPerView: 7\r\n+                    slidesPerView: 7,\r\n                 },\r\n                 1200: {\r\n                     slidesPerView: 8,\r\n                 },\r\n"
+                },
+                {
+                    "date": 1733929167862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -377,9 +377,9 @@\n                 delay: 2000,\r\n                 disableOnInteraction: false,\r\n             },\r\n             768: {\r\n-                992: {\r\n+                768: {\r\n                     slidesPerView: 6,\r\n                 },\r\n                 992: {\r\n                     slidesPerView: 7,\r\n"
+                },
+                {
+                    "date": 1733929173657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -376,14 +376,14 @@\n             autoplay: {\r\n                 delay: 2000,\r\n                 disableOnInteraction: false,\r\n             },\r\n-            768: {\r\n+            breakpoints: {\r\n                 768: {\r\n-                    slidesPerView: 6,\r\n+                    slidesPerView: 7\r\n                 },\r\n                 992: {\r\n-                    slidesPerView: 7,\r\n+                    slidesPerView: 7\r\n                 },\r\n                 1200: {\r\n                     slidesPerView: 8,\r\n                 },\r\n"
+                },
+                {
+                    "date": 1733929180775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -378,9 +378,9 @@\n                 disableOnInteraction: false,\r\n             },\r\n             breakpoints: {\r\n                 768: {\r\n-                    slidesPerView: 7\r\n+                    slidesPerView: 5\r\n                 },\r\n                 992: {\r\n                     slidesPerView: 7\r\n                 },\r\n"
+                },
+                {
+                    "date": 1733929207821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -377,8 +377,11 @@\n                 delay: 2000,\r\n                 disableOnInteraction: false,\r\n             },\r\n             breakpoints: {\r\n+                575: {\r\n+                    slidesPerView: 4\r\n+                },\r\n                 768: {\r\n                     slidesPerView: 5\r\n                 },\r\n                 992: {\r\n"
+                },
+                {
+                    "date": 1733929229853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -377,9 +377,10 @@\n                 delay: 2000,\r\n                 disableOnInteraction: false,\r\n             },\r\n             breakpoints: {\r\n-                575: {\r\n+                \r\n+                480: {\r\n                     slidesPerView: 4\r\n                 },\r\n                 768: {\r\n                     slidesPerView: 5\r\n"
+                },
+                {
+                    "date": 1733929241606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -377,10 +377,12 @@\n                 delay: 2000,\r\n                 disableOnInteraction: false,\r\n             },\r\n             breakpoints: {\r\n-                \r\n                 480: {\r\n+                    slidesPerView: 3\r\n+                },\r\n+                575: {\r\n                     slidesPerView: 4\r\n                 },\r\n                 768: {\r\n                     slidesPerView: 5\r\n"
+                },
+                {
+                    "date": 1733929248224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -368,9 +368,9 @@\n \r\n         // команда - слайдер\r\n \r\n         var swipersol = new Swiper(\".teamslider\", {\r\n-            slidesPerView: 1.5,\r\n+            slidesPerView: 2,\r\n             spaceBetween: 0,\r\n             speed: 1500,\r\n             loop: true,\r\n             autoplay: {\r\n"
+                },
+                {
+                    "date": 1733929261636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -368,9 +368,9 @@\n \r\n         // команда - слайдер\r\n \r\n         var swipersol = new Swiper(\".teamslider\", {\r\n-            slidesPerView: 2,\r\n+            slidesPerView: 3,\r\n             spaceBetween: 0,\r\n             speed: 1500,\r\n             loop: true,\r\n             autoplay: {\r\n"
+                },
+                {
+                    "date": 1733929272771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -368,9 +368,9 @@\n \r\n         // команда - слайдер\r\n \r\n         var swipersol = new Swiper(\".teamslider\", {\r\n-            slidesPerView: 3,\r\n+            slidesPerView: 2.5,\r\n             spaceBetween: 0,\r\n             speed: 1500,\r\n             loop: true,\r\n             autoplay: {\r\n"
                 }
             ],
             "date": 1727259976394,

@@ -198,7 +198,7 @@
         //         { id: '3', text: 'WeChat', img: 'images/contacts/wc-green.svg' },
         //         { id: '4', text: 'Skype', img: 'images/contacts/sc-green.svg' },
         //     ];
-            
+
 
         //     function formatCountry(country) {
         //         if (!country.id) { return country.text; }
@@ -243,7 +243,7 @@
         //     });
         // }
 
-        
+
         // section animation
         if (document.querySelector('.gradient-bg')) {
 
@@ -313,7 +313,7 @@
         }
 
 
-        
+
         //    Header - solution
         if ($(".solhead__cat").length > 0) {
             document.querySelector(".solhead__cat ul").addEventListener("wheel", function (event) {
@@ -365,6 +365,39 @@
             $(this).toggleClass('rotate');
         });
 
+
+        // команда - слайдер
+
+        var swipersol = new Swiper(".teamslider", {
+            slidesPerView: 2.5,
+            spaceBetween: 0,
+            speed: 1500,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                480: {
+                    slidesPerView: 3
+                },
+                575: {
+                    slidesPerView: 4
+                },
+                768: {
+                    slidesPerView: 5
+                },
+                992: {
+                    slidesPerView: 7
+                },
+                1200: {
+                    slidesPerView: 8,
+                },
+                1400: {
+                    slidesPerView: 9,
+                },
+            },
+        });
 
 
 
