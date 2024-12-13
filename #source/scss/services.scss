@@ -229,6 +229,7 @@
         margin-bottom: 40px;
         color: #CFD1CC;
         @include aaa;
+        font-size: 16px;
     }
 }
 
@@ -957,7 +958,7 @@
     .inputfield {
         margin-bottom: 30px;
 
-        input {
+        input, textarea {
             font-family: "PT Sans", sans-serif;
             font-size: 16px;
             width: 100%;
@@ -972,6 +973,26 @@
                 border-bottom: 1px solid #fff;
             }
         }
+
+        textarea {
+            resize: none;
+            outline: none;
+            padding-top: 8px;
+
+            &::-webkit-scrollbar {
+                width: 4px;
+            }
+
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--lime);
+                border-radius: 5px;
+            }
+        }
+
     }
 
     .submbtn {
@@ -1032,9 +1053,32 @@
     }
 }
 
+.nameproject {
+    span {
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
 @media(max-width:1599.8px) {
     .techslbox {
         padding-left: 30px;
+    }
+
+    .logwrap .imgwrap {
+        margin: 20px 20px 0 20px;
     }
 }
 
@@ -1232,7 +1276,6 @@
     }
 
     .services__hero p {
-        font-size: 18px;
         line-height: 135%;
     }
 

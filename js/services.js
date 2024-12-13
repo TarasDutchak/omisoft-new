@@ -3,7 +3,6 @@
 (function ($) {
 
     $(document).ready(function () {
-        console.log('test')
         // ----------------------hero cards - animation----------------------
         if ($('.services__hero').length) {
             let cards = document.querySelectorAll('.servheroinfo');
@@ -72,50 +71,86 @@
             window.addEventListener('resize', setCardPositions);
         }
 
-
-
-
-        // document.addEventListener('scroll', () => {
-        //     const cards = document.querySelectorAll('#cards .card');
-        //     const textboxes = document.querySelectorAll('.successstory__right .textboxes');
-
+        // const cards = document.querySelectorAll('#cards .card');
+        // const nameProjects = document.querySelectorAll('.nameproject span');
+        // const textboxes = document.querySelectorAll('.textboxes');
+        
+        // window.addEventListener('scroll', () => {
+        //     const halfScreen = window.innerHeight / 2;
+        //     let activeIndex = -1;
+        
+        //     // Перевіряємо всі картки
         //     cards.forEach((card, index) => {
-        //         const rect = card.getBoundingClientRect();
-        //         // Перевіряємо, чи знаходиться елемент у видимій області екрана
-        //         if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-        //             // Ховаємо всі textboxes, окрім поточного
-        //             textboxes.forEach((box, i) => {
-        //                 box.classList.toggle('hide', i !== index);
-        //             });
+        //         const cardTop = card.getBoundingClientRect().top; // Відстань від верхнього краю вікна
+        //         const cardHeight = card.offsetHeight;
+        
+        //         // Перевіряємо, чи картка перекриває 50% екрана
+        //         if (cardTop <= halfScreen && (cardTop + cardHeight) >= halfScreen) {
+        //             activeIndex = index;
         //         }
         //     });
+        
+        //     // Гарантуємо, що хоча б один елемент буде активним
+        //     if (activeIndex === -1) {
+        //         activeIndex = 0; // Якщо жодна картка не активна, вибираємо першу
+        //     }
+        
+        //     // Оновлюємо стани для span та textboxes
+        //     nameProjects.forEach((span, index) => {
+        //         span.classList.toggle('show', index === activeIndex);
+        //     });
+        
+        //     textboxes.forEach((box, index) => {
+        //         box.classList.toggle('hide', index !== activeIndex);
+        //     });
         // });
+        
 
-        document.addEventListener('scroll', () => {
-            const cards = document.querySelectorAll('#cards .card');
-            const textboxes = document.querySelectorAll('.successstory__right .textboxes');
+        const cards = document.querySelectorAll('#cards .card');
+const nameProjects = document.querySelectorAll('.nameproject span');
+const textboxes = document.querySelectorAll('.textboxes');
 
-            // Set the distance from the top based on screen width
-            const threshold = window.innerWidth <= 768 ? 500 : 360;
+window.addEventListener('scroll', () => {
+    // Визначаємо адаптивну зону активації
+    const screenPercentage = window.innerWidth <= 768 ? 0.7 : 0.5; // 30% для мобільних, 50% для десктопа
+    const activationZone = window.innerHeight * screenPercentage;
 
-            cards.forEach((card, index) => {
-                const rect = card.getBoundingClientRect();
+    let activeIndex = -1;
 
-                // Check if the card is within the threshold distance from the top of the screen
-                if (rect.top >= 0 && rect.top <= threshold) {
-                    // Hide all textboxes except the current one
-                    textboxes.forEach((box, i) => {
-                        box.classList.toggle('hide', i !== index);
-                    });
-                }
-            });
-        });
+    // Перевіряємо всі картки
+    cards.forEach((card, index) => {
+        const cardTop = card.getBoundingClientRect().top; // Відстань від верхнього краю вікна
+        const cardHeight = card.offsetHeight;
 
+        // Перевіряємо, чи картка перекриває зону активації
+        if (cardTop <= activationZone && (cardTop + cardHeight) >= activationZone) {
+            activeIndex = index;
+        }
+    });
 
+    // Гарантуємо, що хоча б один елемент буде активним
+    if (activeIndex === -1) {
+        activeIndex = 0; // Якщо жодна картка не активна, вибираємо першу
+    }
+
+    // Оновлюємо стани для span та textboxes
+    nameProjects.forEach((span, index) => {
+        span.classList.toggle('show', index === activeIndex);
+    });
+
+    textboxes.forEach((box, index) => {
+        box.classList.toggle('hide', index !== activeIndex);
+    });
+});
 
        
 
         // ----------------------Auto tabs----------------------
+
+
+
+
+
 
         var swiper12 = new Swiper(".mySwiper12", {
             spaceBetween: 10,

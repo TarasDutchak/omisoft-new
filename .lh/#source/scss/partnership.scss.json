@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 293,
+            "activePatchIndex": 296,
             "patches": [
                 {
                     "date": 1730384484527,
@@ -1180,6 +1180,18 @@
                 {
                     "date": 1731140023407,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -750,9 +750,9 @@\n     }\n \n     \n .serv-testimonials .button-container-1 {\n-    max-width: 320px;\n+    max-width: 335px;\n }\n \n \n     .becomepartner .becomepartner__left .title,\n"
+                },
+                {
+                    "date": 1734007147563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -654,15 +654,17 @@\n     .becomepartner-sect {\n         padding-top: 0;\n     }\n \n+    .waystocollaborate .sn3 {\n+        position: relative;\n+    }\n \n \n \n \n \n \n-\n     .whypartnerswithus {\n         padding-top: 120px;\n     }\n \n"
+                },
+                {
+                    "date": 1734007155590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -656,8 +656,9 @@\n     }\n \n     .waystocollaborate .sn3 {\n         position: relative;\n+        top: initial;\n     }\n \n \n \n"
+                },
+                {
+                    "date": 1734007566986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -805,8 +805,9 @@\n     .becomepartner__mainimg img {\n         position: relative;\n         margin-right: 0;\n         width: 261px;\n+        vertical-align: top;\n     }\n \n     .becomepartner .becomepartner__left .title {\n         font-size: 24px;\n"
                 }
             ],
             "date": 1730384484527,

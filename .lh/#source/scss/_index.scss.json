@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1721219726833,
@@ -60,6 +60,14 @@
                 {
                     "date": 1733928417003,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1909,15 +1909,8 @@\n \r\n \r\n         }\r\n     }\r\n-\r\n-\r\n-\r\n-\r\n-\r\n-\r\n-\r\n }\r\n \r\n @media(max-width:767.8px) {\r\n \r\n@@ -2483,8 +2476,16 @@\n \r\n }\r\n \r\n \r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n @media(min-width:1200px) and (max-height:730px) {\r\n     .herosection__topinfo h1 {\r\n         font-size: 50px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1734009014314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1310,9 +1310,9 @@\n     z-index: 2;\r\n     display: flex;\r\n     align-items: center;\r\n     padding: 10px 32px;\r\n-    min-height: 88px;\r\n+    min-height: 74px;\r\n     cursor: pointer;\r\n \r\n     p {\r\n         margin: 0;\r\n"
+                },
+                {
+                    "date": 1734009066377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1286,9 +1286,9 @@\n }\r\n \r\n .faqrow {\r\n     position: relative;\r\n-    margin-bottom: 16px;\r\n+    margin-bottom: 24px;\r\n     border: 0.5px solid;\r\n     border-image-slice: 1;\r\n     border-width: 1px;\r\n     border-image-source: linear-gradient(180deg, rgba(219, 255, 116, 0.1) 0%, rgba(255, 255, 255, 0) 100%);\r\n"
                 }
             ],
             "date": 1721219726833,

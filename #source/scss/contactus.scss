@@ -75,7 +75,7 @@
             a {
                 font-family: 'PowerGrotesk';
                 font-weight: 500;
-                font-size: 32px;
+                font-size: 20px;
                 color: var(--grey);
                 padding-left: 44px;
                 position: relative;
@@ -902,9 +902,8 @@
 
         li {
             width: 100%;
-            max-width: 50%;
-            flex: 0 0 50%;
-            margin: 0;
+            max-width: 100%;
+            flex: 0 0 100%;
 
             a {
                 font-size: 20px;
