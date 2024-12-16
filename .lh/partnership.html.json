@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 138,
+            "activePatchIndex": 140,
             "patches": [
                 {
                     "date": 1730384240781,
@@ -560,6 +560,14 @@
                 {
                     "date": 1733647131451,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \n </head>\n \n <body>\n-    <header class=\"header white\">\n+    <header class=\"header\">\n         <div class=\"c-container\">\n             <div class=\"c-row c-align-items-center\">\n                 <div class=\"c-col-xl-2 c-col-sm-5 c-col-6\">\n                     <a href=\"#\" class=\"header__logo\">\n"
+                },
+                {
+                    "date": 1734352950825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1146,9 +1146,9 @@\n             </div>\n         </section>\n         <!-- patnership -->\n         <div class=\"section-group\">\n-            <div class=\"gradient-bg\">\n+            <!-- <div class=\"gradient-bg\">\n                 <svg xmlns='http://www.w3.org/2000/svg' class=\"noiseBg\">\n                     <filter class='noiseFilterBg'>\n                         <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />\n                     </filter>\n@@ -1172,9 +1172,9 @@\n                     <div class=\"g4\"></div>\n                     <div class=\"g5\"></div>\n                     <div class=\"interactive\"></div>\n                 </div>\n-            </div>\n+            </div> -->\n \n             <div class=\"sliderpartnerwrap\">\n                 <div class=\"swiper partnerslider\">\n                     <div class=\"swiper-wrapper\">\n"
+                },
+                {
+                    "date": 1734352961983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1146,9 +1146,9 @@\n             </div>\n         </section>\n         <!-- patnership -->\n         <div class=\"section-group\">\n-            <!-- <div class=\"gradient-bg\">\n+            <div class=\"gradient-bg\">\n                 <svg xmlns='http://www.w3.org/2000/svg' class=\"noiseBg\">\n                     <filter class='noiseFilterBg'>\n                         <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />\n                     </filter>\n@@ -1172,9 +1172,9 @@\n                     <div class=\"g4\"></div>\n                     <div class=\"g5\"></div>\n                     <div class=\"interactive\"></div>\n                 </div>\n-            </div> -->\n+            </div>\n \n             <div class=\"sliderpartnerwrap\">\n                 <div class=\"swiper partnerslider\">\n                     <div class=\"swiper-wrapper\">\n"
                 }
             ],
             "date": 1730384240781,
