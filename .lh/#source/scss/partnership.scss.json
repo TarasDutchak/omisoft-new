@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 296,
+            "activePatchIndex": 297,
             "patches": [
                 {
                     "date": 1730384484527,
@@ -1192,6 +1192,10 @@
                 {
                     "date": 1734007566986,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -805,8 +805,9 @@\n     .becomepartner__mainimg img {\n         position: relative;\n         margin-right: 0;\n         width: 261px;\n+        vertical-align: top;\n     }\n \n     .becomepartner .becomepartner__left .title {\n         font-size: 24px;\n"
+                },
+                {
+                    "date": 1734367560415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -657,8 +657,9 @@\n \n     .waystocollaborate .sn3 {\n         position: relative;\n         top: initial;\n+        margin-bottom: 30px;\n     }\n \n \n \n"
                 }
             ],
             "date": 1730384484527,
