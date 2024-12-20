@@ -1060,6 +1060,15 @@
         &.show {
             display: block;
         }
+
+        a {
+            color: #858B89;
+            transition: 0.3s;
+
+            &:hover {
+                color: #000;
+            }
+        }
     }
 }
 
