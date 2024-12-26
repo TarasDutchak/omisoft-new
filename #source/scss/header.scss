@@ -110,6 +110,11 @@ header.header {
     background: #0F0F10;
     border-radius: 8px;
 
+    &.transparent {
+        background: transparent;
+        color: var(--lime);
+    }
+
 
     img {
         margin-left: 6px;
