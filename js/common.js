@@ -342,7 +342,36 @@
         });
 
 
+        const hovercards = document.querySelectorAll('.hovercard');
 
+        function setHoverCardBehavior() {
+            hovercards.forEach(card => {
+                const newCard = card.cloneNode(true);
+                card.replaceWith(newCard);
+            });
+
+            const updatedHovercards = document.querySelectorAll('.hovercard');
+
+            if (window.innerWidth > 1200) {
+                updatedHovercards.forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        updatedHovercards.forEach(c => c.classList.remove('active'));
+                        card.classList.add('active');
+                    });
+                });
+            } else {
+                updatedHovercards.forEach(card => {
+                    card.addEventListener('click', () => {
+                        updatedHovercards.forEach(c => c.classList.remove('active'));
+                        card.classList.add('active');
+                    });
+                });
+            }
+        }
+
+        setHoverCardBehavior();
+
+        window.addEventListener('resize', setHoverCardBehavior);
 
     });
 
