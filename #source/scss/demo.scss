@@ -42,49 +42,52 @@
 
 
 .livedomoslider {
-    padding: 100px 0 0 0 !important;
+    padding: 140px 0 0 0 !important;
 
     .swiper-slide {
-        transition: 1s !important;
+        transition: 2s !important;
         text-align: center;
+        transform-origin: 50% 0;
+
+        // transform: translateY(-140px) rotate(-14deg);
     }
 
     /* Центральні слайди (прямі) */
     .slide-2 {
-        transform: translateY(0px) rotate(1deg);
+        transform: translateY(0px) rotate(2deg);
     }
 
     .slide-3 {
-        transform: translateY(0px) rotate(-1deg);
+        transform: translateY(0px) rotate(-2deg);
     }
 
     /* Сусідні слайди (трохи підняті і повернуті) */
     .slide-1 {
-        transform: translateY(-15px) rotate(4deg);
+        transform: translateY(-20px) rotate(5deg);
     }
 
     .slide-4 {
-        transform: translateY(-15px) rotate(-4deg);
+        transform: translateY(-20px) rotate(-5deg);
     }
 
     /* Крайні слайди (вище і більше повернуті) */
     .slide-0 {
-        transform: translateY(-55px) rotate(10deg);
+        transform: translateY(-60px) rotate(7deg);
         filter: blur(5px);
     }
 
     .slide-5 {
-        transform: translateY(-55px) rotate(-10deg);
+        transform: translateY(-60px) rotate(-7deg);
         filter: blur(5px);
     }
 
     .slide-outer-left {
-        transform: translateY(-115px) rotate(14deg);
+        transform: translateY(-120px) rotate(14deg);
         opacity: 0.5;
     }
 
     .slide-outer-right {
-        transform: translateY(-115px) rotate(-14deg);
+        transform: translateY(-120px) rotate(-14deg);
         opacity: 0.5;
     }
 }
@@ -529,6 +532,7 @@
         margin: 4px 12px 4px 0;
     }
 }
+
 .additfunc h4 {
     margin-bottom: 6px;
 }
@@ -560,6 +564,11 @@
     .serv-testimonials.ldemo .title-sliderarr {
         max-width: 54%;
     }
+
+  
+
+   
+
 }
 
 @media(max-width:1399.8px) {
@@ -1198,7 +1207,10 @@
         }
     }
 
-
+    .livedomoslider {
+        padding-top: 100px !important;
+    }
+    
 
 
 
@@ -1239,3 +1251,4 @@
 
 
 // font-family: 'PowerGrotesk';
+

@@ -5,7 +5,7 @@
 
         var swiper = new Swiper(".livedomoslider", {
             loop: true,
-            speed: 1500,
+            speed: 2000,
             initialSlide: 1,
             slidesPerView: 6,
             spaceBetween: 30,
@@ -14,10 +14,10 @@
             centeredSlides: false,
             slideToClickedSlide: true,
 
-            //     autoplay: {
-            //         delay: 2500,
-            //         disableOnInteraction: false,
-            //     },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
 
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -125,7 +125,7 @@
                     }, 0);
                 });
 
-                $('.vertical-accordeon__header').click(function(){
+                $('.vertical-accordeon__header').click(function () {
                     $('.vertical-accordeon__body').not($(this).next()).slideUp();
                     $(this).next().slideToggle();
                 });
@@ -171,8 +171,8 @@
                 invert: false,
                 sensitivity: 1,
             },
-            
-            
+
+
 
         });
 
@@ -185,4 +185,9 @@
 
     });
 
-}(jQuery)); 
+}(jQuery));
+
+
+
+
+
