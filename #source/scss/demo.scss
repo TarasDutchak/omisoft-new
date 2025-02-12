@@ -24,15 +24,15 @@
         max-width: 767px;
         margin: 0 auto;
         text-align: center;
-        color: #fff;
+        color: #CFD1CC;
         font-size: 20px;
         margin-bottom: 40px;
+        font-weight: 400;
     }
 
     p {
-        color: #fff;
         margin: 0;
-        color: #858B89;
+        color: #CFD1CC;
     }
 
     a {
@@ -117,7 +117,7 @@
 .vertical-accordeon__header-row {
     border-right: 1px solid #CFD1CC;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     width: 100%;
     max-width: 102px;
     flex: 0 0 102px;
@@ -125,6 +125,7 @@
     transition: 1s;
     background: #fff;
     overflow: hidden;
+    // white-space: nowrap;
 
     &.active {
         max-width: calc(100% - 306px);
@@ -168,22 +169,31 @@
 
 .vertical-accordeon__body {
     width: 100%;
-    max-width: calc(100% - 102px);
-    flex: 0 0 calc(100% - 102px);
+    // max-width: calc(100% - 102px);
+    // flex: 0 0 calc(100% - 102px);
+    max-width: 0;
+    flex: 0 0 0;
     // white-space: nowrap;
     padding: 0 90px 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    opacity: 0;
-    transform: translate(20px, 0);
+    // opacity: 0;
+    // transform: translate(20px, 0);
+    // display: none;
+    display: flex;
+    max-width: 991px;
+    flex: 0 0 991px;
 
 
     &.show {
-        opacity: 1;
-        transform: translate(0, 0);
-        transition: 1s;
+        // opacity: 1;
+        // transform: translate(0, 0);
+        // transition: 1s;
+
     }
+
+    .contwrap {}
 
 }
 
@@ -396,6 +406,19 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 423px;
+    transition: 0.5s;
+
+    &:hover {
+        background: #303030;
+
+        h4 {
+            color: #CDF765;
+        }
+
+        p {
+            color: #fff;
+        }
+    }
 
     h4 {
         position: relative;
@@ -406,8 +429,9 @@
         margin-bottom: 12px;
         padding-right: 64px;
         line-height: normal;
+        transition: 0.3s;
 
-        a {
+        span {
             width: 44px;
             height: 44px;
             display: inline-flex;
@@ -424,6 +448,7 @@
     p {
         color: #858B89;
         line-height: 150%;
+        transition: 0.3s;
     }
 
     .solutionslbox__bottom {
@@ -493,6 +518,33 @@
 
     .greenborder-btn {
         margin-top: 0;
+    }
+}
+
+.additfunc ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        margin: 4px 12px 4px 0;
+    }
+}
+.additfunc h4 {
+    margin-bottom: 6px;
+}
+
+.collistsect .section-subtitle {
+    color: #858B89;
+}
+
+
+
+
+
+@media(max-width:1699.8px) {
+    .vertical-accordeon__body {
+        max-width: 791px;
+        flex: 0 0 791px;
     }
 }
 
@@ -580,17 +632,25 @@
     }
 
     .vertical-accordeon__body {
-        max-width: calc(100% - 90px);
-        flex: 0 0 calc(100% - 90px);
+        // max-width: calc(100% - 90px);
+        // flex: 0 0 calc(100% - 90px);
         padding-left: 10px;
         padding-right: 10px;
     }
 
+    .vertical-accordeon__body {
+        max-width: 720px;
+        flex: 0 0 720px;
+    }
 
+    .vertical-accordeon__header-row {
+        max-width: 100px;
+        flex: 0 0 100px;
+    }
 
-
-
-
+    .features .section-subtitle {
+        font-size: 20px;
+    }
 
 
 
@@ -628,8 +688,14 @@
         right: 20px;
     }
 
+    .vertical-accordeon__body {
+        max-width: 540px;
+        flex: 0 0 540px;
+    }
 
-
+    .vertical-accordeon__header-row {
+        height: 500px;
+    }
 
 }
 
@@ -731,8 +797,8 @@
     }
 
     .additfunc ul li {
-        margin-right: 4px;
-        margin-bottom: 12px;
+        // margin-right: 4px;
+        // margin-bottom: 12px;
 
         a {
             padding: 7px 18px;
@@ -786,8 +852,14 @@
         max-width: 393px;
     }
 
+    .vertical-accordeon__header-row {
+        flex-wrap: wrap;
+    }
 
-
+    .vertical-accordeon__header-row.active .vertical-accordeon__body,
+    .vertical-accordeon__header-row .vertical-accordeon__body {
+        display: none;
+    }
 
 
 }
@@ -1091,22 +1163,23 @@
         flex: 0 0 100%;
     }
 
-    .serv-testimonials.ldemo  .slider-wrapper {
+    .serv-testimonials.ldemo .slider-wrapper {
         margin-top: 32px;
     }
+
     .serv-testimonials.ldemo {
         .testim__slidebox {
             padding: 40px 24px 47px 24px !important;
         }
 
-       .testim__slidebox .q {
+        .testim__slidebox .q {
             width: 40px;
             margin-left: 0;
             top: -5px;
             position: relative;
         }
     }
-   
+
 
     .oursolutions .swiper-slide {
         width: 290px;
