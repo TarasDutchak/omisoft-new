@@ -629,9 +629,6 @@
 
 
 
-
-
-
 @media(max-width:1399.8px) {
     .section-group .serv-testimonials {
         margin-bottom: 143px;
@@ -1052,5 +1049,20 @@
 @media(max-width:359.8px) {
     .section-group .serv-testimonials .greenborder-btn {
         max-width: 290px;
+    }
+}
+
+
+
+
+
+// blog line
+.progress-container {
+    top: 80px !important;
+}
+
+@media(max-width:575.8px) {
+    .progress-container {
+        top: 70px !important;
     }
 }

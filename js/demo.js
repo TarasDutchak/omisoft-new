@@ -167,10 +167,10 @@
         var swiper = new Swiper(".oursolutions-slider", {
             slidesPerView: "auto",
             spaceBetween: 20,
-            mousewheel: {
-                invert: false,
-                sensitivity: 1,
-            },
+            // mousewheel: {
+            //     invert: false,
+            //     sensitivity: 1,
+            // },
 
 
 
