@@ -10,7 +10,7 @@
             slidesPerView: 6,
             spaceBetween: 30,
             slidesPerGroup: 1,
-            // allowTouchMove: false,
+            allowTouchMove: false,
             centeredSlides: false,
             slideToClickedSlide: true,
 
@@ -115,7 +115,7 @@
         $('.vertical-accordeon .vertical-accordeon__header-row:nth-child(1) .vertical-accordeon__body').addClass('show');
         function setEventListeners() {
             if ($(window).width() < 991) {
-                $('.vertical-accordeon__header-row').off('mouseenter mouseleave').click(function () {
+                $('.vertical-accordeon__header-row').off('mouseenter').click(function () {
                     $('.vertical-accordeon__header-row').removeClass('active');
                     $(this).addClass('active');
 
