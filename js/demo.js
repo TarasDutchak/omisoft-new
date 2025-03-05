@@ -86,82 +86,6 @@
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // $('.vertical-accordeon .vertical-accordeon__header-row:nth-child(1) .vertical-accordeon__body').addClass('show');
-        // function setEventListeners() {
-        //     if ($(window).width() < 991) {
-        //         $('.vertical-accordeon__header-row').off('mouseenter').click(function () {
-        //             $('.vertical-accordeon__header-row').removeClass('active');
-        //             $(this).addClass('active');
-
-        //             var body = $(this).next('.vertical-accordeon__body');
-        //             setTimeout(() => {
-        //                 body.addClass('show');
-        //             }, 0);
-        //         });
-
-        //         $('.vertical-accordeon__header').click(function () {
-        //             $('.vertical-accordeon__body').not($(this).next()).slideUp();
-        //             $(this).next().slideToggle();
-        //         });
-
-
-
-        //     } else {
-        //         $('.vertical-accordeon__header-row').off('click').hover(
-        //             function () {
-        //                 $('.vertical-accordeon__header-row').removeClass('active');
-        //                 $(this).addClass('active');
-
-        //                 $('.vertical-accordeon__body').not($(this).find('.vertical-accordeon__body')).removeClass('show');
-        //                 var body = $(this).find('.vertical-accordeon__body');
-        //                 setTimeout(() => {
-        //                     body.addClass('show');
-        //                 }, 0);
-        //             },
-        //             function () {
-        //                 // On mouseleave
-        //                 // $(this).removeClass('active');
-        //                 // $(this).next('.vertical-accordeon__body').removeClass('show');
-        //             }
-        //         );
-        //     }
-        // }
-
-        // // Initialize the event listeners
-        // setEventListeners();
-
-        // // Re-check on window resize
-        // $(window).resize(function () {
-        //     setEventListeners();
-        // });
-
-
         // Відразу відкриваємо перший елемент акордеону
         $('.vertical-accordeon .vertical-accordeon__header-row:first-child .vertical-accordeon__body').addClass('show');
         if ($(window).width() > 991) {
@@ -183,8 +107,53 @@
         }
 
 
+        // desktop screen slider
+        var swiper = new Swiper(".livedomoslider-descscreen", {
+            slidesPerView: 1.1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            speed: 1500,
+            initialSlide: 1,
+            allowTouchMove: false,
+            // effect: 'coverflow',
 
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
 
+            // coverflowEffect: {
+            //     rotate: 0,
+            //     stretch: 0,
+            //     depth: 100,
+            //     modifier: 3,
+            //     slideShadows: true
+            //   },
+
+            breakpoints: {
+                480: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 40,
+                },
+                768: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 40,
+                },
+                992: {
+                    slidesPerView: 1.8,
+                    spaceBetween: 80,
+                },
+                1300: {
+                    slidesPerView: 2.1,
+                    spaceBetween: 80,
+                },
+                1500: {
+                    slidesPerView: 2.6,
+                    spaceBetween: 100,
+                },
+            },
+        });
 
 
 

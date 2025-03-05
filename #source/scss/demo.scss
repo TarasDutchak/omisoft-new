@@ -541,8 +541,40 @@
     color: #858B89;
 }
 
+.gradient-bg__mobile {
+    display: none;
+}
 
+.livedomoslider-descscreen {
+    padding-top: 100px;
+    padding-bottom: 50px;
 
+    .swiper-slide {
+        transition: transform 1s ease-out, filter 1s ease-out;
+        transform: scale(0.85);
+        filter: blur(9.4px);
+
+        img {
+            width: 100%;
+            border-radius: 20px;
+            max-width: 835px;
+        }
+
+        &.swiper-slide-active {
+            transform: scale(1.15);
+            z-index: 2;
+            filter: blur(0);
+        }
+
+        &.swiper-slide-next {
+            transform: scale(0.85) rotate(-6deg);
+        }
+
+        &.swiper-slide-prev {
+            transform: scale(0.85) rotate(6deg);
+        }
+    }
+}
 
 
 @media(max-width:1699.8px) {
@@ -565,9 +597,15 @@
         max-width: 54%;
     }
 
-  
+    .livedomoslider-descscreen .swiper-slide.swiper-slide-next {
+        transform: scale(0.85) rotate(-4deg);
+    }
 
-   
+    .livedomoslider-descscreen .swiper-slide.swiper-slide-prev {
+        transform: scale(0.85) rotate(4deg);
+    }
+
+
 
 }
 
@@ -806,8 +844,6 @@
     }
 
     .additfunc ul li {
-        // margin-right: 4px;
-        // margin-bottom: 12px;
 
         a {
             padding: 7px 18px;
@@ -875,7 +911,27 @@
             display: block;
         }
     }
-    
+
+    // --
+    .livedomoslider-descscreen {
+        padding-top: 144px;
+    }
+    .livedomoslider-descscreen .swiper-slide.swiper-slide-active {
+        transform: scale(1);
+
+        // .imgwrap {
+        //     padding: 0 45px;
+        // }
+    }
+
+    .livedomoslider-descscreen .swiper-slide.swiper-slide-next {
+        transform: scale(0.85) rotate(-4deg) translate(-40%, -180px);
+    }
+
+    .livedomoslider-descscreen .swiper-slide.swiper-slide-prev {
+        transform: scale(0.85) rotate(4deg) translate(40%, -180px);
+    }
+   
 
 
 }
@@ -1020,10 +1076,81 @@
         margin-top: 20px;
     }
 
+    .gradient-bg {
+        display: none;
+    }
+
+    .gradient-bg__mobile {
+        display: block;
+
+        div {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            &:nth-child(1) {
+                background: #CDF765;
+                filter: blur(216px);
+                width: 250px;
+                height: 250px;
+                display: inline-block;
+                top: 50%;
+            }
+
+            &:nth-child(2) {
+                background: #CDF765;
+                filter: blur(400px);
+                width: 50%;
+                height: 240px;
+                display: inline-block;
+                top: 60%;
+                left: 0;
+            }
+
+            &:nth-child(3) {
+                background: #93FFEB;
+                filter: blur(116px);
+                width: 50%;
+                height: 150px;
+                display: inline-block;
+                right: 0;
+                top: 40%;
+            }
+        }
+    }
+
+    .section-group {
+        .gradient-bg__mobile {
+            div {
+
+                &:nth-child(1) {
+                    top: 15%;
+                }
+
+                &:nth-child(2) {
+                    top: 10%;
+                }
+
+                &:nth-child(3) {
+                    top: 0;
+                }
+            }
+        }
+    }
 
 
+    .livedomoslider-descscreen {
+        padding-top: 100px;
+        padding-bottom: 15px;
+    }
 
+    .livedomoslider-descscreen .swiper-slide.swiper-slide-prev {
+        transform: scale(0.85) rotate(4deg) translate(40%, -100px);
+    }
 
+    .livedomoslider-descscreen .swiper-slide.swiper-slide-next {
+        transform: scale(0.85) rotate(-4deg) translate(-40%,-100px);
+    }
 
 
 
@@ -1217,9 +1344,20 @@
     .livedomoslider {
         padding-top: 100px !important;
     }
+
     
 
+    .livedomoslider-descscreen .swiper-slide img {
+        border-radius: 10px;
+    }
 
+    .livedomoslider-descscreen .swiper-slide.swiper-slide-prev {
+        transform: scale(0.85) rotate(4deg) translate(40%, -70px);
+    }
+
+    .livedomoslider-descscreen .swiper-slide.swiper-slide-next {
+        transform: scale(0.85) rotate(-4deg) translate(-40%, -70px);
+    }
 
 
 
@@ -1256,6 +1394,4 @@
 
 
 
-
 // font-family: 'PowerGrotesk';
-
