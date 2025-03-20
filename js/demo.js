@@ -198,7 +198,43 @@
 
         });
 
-
+        // demotech slider
+        var swiper = new Swiper(".demotech-slider", {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            loop: true,
+            slidesOffsetBefore: 0,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.8,
+                    slidesOffsetBefore: 20,
+                },
+                480: {
+                    slidesPerView: 2.5,
+                    slidesOffsetBefore: 20,
+                },
+                575: {
+                    slidesPerView: 2.5,
+                    slidesOffsetBefore: 20,
+                },
+                768: {
+                    slidesPerView: 3.5,
+                    slidesOffsetBefore: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    slidesOffsetBefore: 0,
+                },
+                1199: {
+                    slidesPerView: 3.5,
+                    slidesOffsetBefore: 0,
+                },
+                1400: {
+                    slidesPerView: 4,
+                    slidesOffsetBefore: 0,
+                },
+            },
+        });
 
 
 
