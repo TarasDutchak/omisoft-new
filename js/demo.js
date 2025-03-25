@@ -155,35 +155,6 @@
             },
         });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // OUR SOLUTION - slider
 
         var swiper = new Swiper(".oursolutions-slider", {
@@ -199,44 +170,121 @@
         });
 
         // demotech slider
-        var swiper = new Swiper(".demotech-slider", {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            loop: true,
-            slidesOffsetBefore: 0,
-            breakpoints: {
-                320: {
-                    slidesPerView: 1.8,
-                    slidesOffsetBefore: 20,
-                },
-                480: {
-                    slidesPerView: 2.5,
-                    slidesOffsetBefore: 20,
-                },
-                575: {
-                    slidesPerView: 2.5,
-                    slidesOffsetBefore: 20,
-                },
-                768: {
-                    slidesPerView: 3.5,
-                    slidesOffsetBefore: 20,
-                },
-                992: {
-                    slidesPerView: 3,
-                    slidesOffsetBefore: 0,
-                },
-                1199: {
-                    slidesPerView: 3.5,
-                    slidesOffsetBefore: 0,
-                },
-                1400: {
-                    slidesPerView: 4,
-                    slidesOffsetBefore: 0,
-                },
-            },
-        });
+        // var swiper = new Swiper(".demotech-slider", {
+        //     slidesPerView: 4,
+        //     spaceBetween: 20,
+        //     loop: true,
+        //     slidesOffsetBefore: 0,
+        //     breakpoints: {
+        //         320: {
+        //             slidesPerView: 1.8,
+        //             slidesOffsetBefore: 20,
+        //         },
+        //         480: {
+        //             slidesPerView: 2.5,
+        //             slidesOffsetBefore: 20,
+        //         },
+        //         575: {
+        //             slidesPerView: 2.5,
+        //             slidesOffsetBefore: 20,
+        //         },
+        //         768: {
+        //             slidesPerView: 3.5,
+        //             slidesOffsetBefore: 20,
+        //         },
+        //         992: {
+        //             slidesPerView: 3,
+        //             slidesOffsetBefore: 0,
+        //         },
+        //         1199: {
+        //             slidesPerView: 3.5,
+        //             slidesOffsetBefore: 0,
+        //         },
+        //         1400: {
+        //             slidesPerView: 4,
+        //             slidesOffsetBefore: 0,
+        //         },
+        //     },
+        // });
 
+        // tech stack
+        if ($('.techslider').length) {
+            var swiper = new Swiper(".techslider", {
+                slidesPerView: 2.3,
+                spaceBetween: 16,
+                mousewheel: true,
+                freeMode: true,
+                loop: true,
+                speed: 1000,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.8,
+                        spaceBetween: 16,
+                        slidesOffsetBefore: 20,
+                    },
+                    480: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 30,
+                        slidesOffsetBefore: 20,
+                    },
+                    768: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 20,
+                        slidesOffsetBefore: 20,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 16,
+                        slidesOffsetBefore: 0,
+                    },
+                    1200: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 20,
+                        slidesOffsetBefore: 0,
+                    },
+                    1400: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                        slidesOffsetBefore: 0,
+                    },
 
+                },
+            });
+
+            // Функція для перезапуску автоплей
+            let autoplayTimeout;
+
+            // Зупиняємо autoplay при скролі мишкою
+            swiper.el.addEventListener('wheel', () => {
+                console.log('Mouse wheel event detected. Stopping autoplay.');
+                swiper.autoplay.stop();
+
+                clearTimeout(autoplayTimeout);
+                // Перезапуск через 2 секунди після зупинки прокручування
+                autoplayTimeout = setTimeout(() => {
+                    console.log('Restarting autoplay after 2 seconds.');
+                    swiper.autoplay.start();
+                }, 2000);
+            });
+
+            // Зупиняємо autoplay при дотику
+            swiper.on('touchStart', () => {
+                console.log('Touch event detected. Stopping autoplay.');
+                swiper.autoplay.stop();
+            });
+
+            // Перезапуск autoplay через 2 секунди після дотику
+            swiper.on('touchEnd', () => {
+                clearTimeout(autoplayTimeout);
+                autoplayTimeout = setTimeout(() => {
+                    swiper.autoplay.start();
+                }, 2000);
+            });
+        }
 
 
 

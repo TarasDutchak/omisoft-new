@@ -752,7 +752,7 @@
 // -----------------------------
 .demoliveform {
     position: relative;
-    padding: 16px 0;
+    padding: 20px 0 20px 32px;
     border-radius: 20px;
 
     &::after {
@@ -763,8 +763,9 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(45deg, #141414, rgba(#121212, 0.72));
-        backdrop-filter: blur(10px);
+        // background: linear-gradient(45deg, #141414, rgba(#121212, 0.72));
+        background: linear-gradient(78.49deg, rgba(20, 20, 20, 0.6) 34.46%, rgba(18, 18, 18, 0.432) 102.93%);
+        backdrop-filter: blur(200px);
         border-radius: 20px;
     }
 
@@ -900,6 +901,47 @@
         right: 0;
     }
 }
+
+.collistsect {
+    padding-bottom: 120px;
+
+    .techstacksect {
+        margin-top: 70px;
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+
+   
+
+    .techslbox {
+        border-radius: 20px;
+        border: 1px solid #EDEFEE;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px 10px 27px;
+        justify-content: center;
+    }
+
+    .techslbox .imgwrap {
+        width: 100%;
+        max-width: 50px;
+    }
+
+    .techslbox p {
+        font-family: "PT Sans", sans-serif;
+        margin: 0;
+        padding-left: 12px;
+        color: #252525;
+        font-size: 18px;
+        line-height: 135%;
+    }
+}
+
+
+
+
 
 
 @media(max-width:1699.8px) {
@@ -1353,6 +1395,11 @@
             width: 100%;
             max-width: calc(100% - 20px);
         }
+    }
+
+    .collistsect .techstacksect h2 {
+        text-align: center;
+        margin-bottom: 60px;
     }
 
 }
@@ -1881,6 +1928,7 @@
 
     .demoliveform__img img {
         right: -85px;
+
     }
 
     .demoliveform__rightinf {
@@ -1903,7 +1951,9 @@
         font-size: 16px;
     }
 
-
+    .collistsect .techstacksect h2 {
+        margin-bottom: 50px;
+    }
 
 
     .features .stitle,
@@ -1931,6 +1981,12 @@
     .launchsect__descr p {
         font-size: 14px;
     }
+
+    .collistsect .techstacksect h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        
+    }
 }
 
 @media(max-width:470.8px) {
@@ -1942,6 +1998,11 @@
             font-size: 24px;
         }
     }
+
+    .demoliveform__img img {
+        max-width: 285px;
+    }
+
 }
 
 
