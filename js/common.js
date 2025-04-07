@@ -375,4 +375,11 @@
 
     });
 
+    if ($('select').length) {
+        $('.styledselect').select2({
+            placeholder: "",
+            minimumResultsForSearch: Infinity,
+        });
+    }
+
 }(jQuery)); 

@@ -7,18 +7,17 @@
     <title>Live demo</title>
     <link rel="stylesheet" href="css/lib/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/lib/select2.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="css/lib/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/ebook.css">
     <link rel="stylesheet" href="css/footer.css">
 
 
 </head>
 
 <body>
-    <header class="header">
+    <header class="header white">
         <div class="c-container">
             <div class="c-row c-align-items-center">
                 <div class="c-col-xl-2 c-col-sm-5 c-col-6">
@@ -679,149 +678,139 @@
         </div>
     </header>
 
-    <main class="main blackbg">
-        <section class="livedemo-herosect">
-            <div class="gradient-bg">
-                <svg xmlns='http://www.w3.org/2000/svg' class="noiseBg">
-                    <filter class='noiseFilterBg'>
-                        <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />
-                    </filter>
-
-                    <rect width='100%' height='100%' preserveAspectRatio="xMidYMid meet" filter='url(#noiseFilterBg)' />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" class="svgBlur">
-                    <defs>
-                        <filter class="goo">
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
-                                result="goo" />
-                            <feBlend in="SourceGraphic" in2="goo" />
-                        </filter>
-                    </defs>
-                </svg>
-                <div class="gradients-container">
-                    <div class="g1"></div>
-                    <div class="g2"></div>
-                    <div class="g3"></div>
-                    <div class="g4"></div>
-                    <div class="g5"></div>
-                    <div class="interactive"></div>
-                </div>
-            </div>
-            <div class="gradient-bg__mobile">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
-            <div class="container text-center">
-                <h1>
-                    Create a P2E Game with<br> Our NotCoin Clone Script!
-                </h1>
-                <p class="subtitle">
-                    Launch your own Telegram Play-to-Earn Game with our NotCoin Clone Script! Increase community
-                    engagement, boost user retention and expand the crypto project’s reach.
-                </p>
-                <a href="#" class="white-arrbtn">
-                    Request a Demo
-                    <img src="images/general/arrowbtn-black.svg" alt="arrow">
-                </a>
-            </div>
-
-            <div class="livedomoslider-wrapper">
-                <div class="swiper livedomoslider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="ldslidewrap">
-                                <img src="images/demo/test.png" alt="slide">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="ldslidewrap">
-                                <img src="images/demo/test.png" alt="slide">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="ldslidewrap">
-                                <img src="images/demo/test.png" alt="slide">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="ldslidewrap">
-                                <img src="images/demo/test.png" alt="slide">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="ldslidewrap">
-                                <img src="images/demo/test.png" alt="slide">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="ldslidewrap">
-                                <img src="images/demo/test.png" alt="slide">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="ldslidewrap">
-                                <img src="images/demo/test.png" alt="slide">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="ldslidewrap">
-                                <img src="images/demo/test.png" alt="slide">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <main class="main">
+        <div class="ebooksingle">
             <div class="container">
-                <div class="demologos">
-                    <div class="demologos__box">
-                        <img src="images/demo/ic1.svg" alt="icon">
+                <div class="breadcrumbbox">
+                    <ul>
+                        <li><a href="#">Insights</a></li>
+                        <li><a href="#">eBooks</a></li>
+                        <li>DevOps Unleashed</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 ebooksingle__formsection">
+                        <div class="imgwrap">
+                            <img src="images/ebook/ebook-single.jpg" alt="img">
+                        </div>
+                        <div class="ebooksingle__form">
+                            <h6>Get this ebook in PDF Format</h6>
+                            <form action="#">
+                                <div class="inputfield">
+                                    <input type="email" placeholder="Your Email">
+                                </div>
+                                <input type="submit" value="Subscribe" class="subscribenews__btn">
+                            </form>
+                        </div>
+
                     </div>
-                    <div class="demologos__box">
-                        <img src="images/demo/ic2.svg" alt="icon">
+                    <div class="col-lg-6">
+                        <div class="ebook-info">
+                            <div class="ebook-info__tags">
+                                <span>14 November 2024</span>
+                                <a href="#">Blockchain</a>
+
+                                <button class="ebook-share">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M8.59 13.51L15.42 17.49M15.41 6.51L8.59 10.49M21 5C21 6.65685 19.6569 8 18 8C16.3431 8 15 6.65685 15 5C15 3.34315 16.3431 2 18 2C19.6569 2 21 3.34315 21 5ZM9 12C9 13.6569 7.65685 15 6 15C4.34315 15 3 13.6569 3 12C3 10.3431 4.34315 9 6 9C7.65685 9 9 10.3431 9 12ZM21 19C21 20.6569 19.6569 22 18 22C16.3431 22 15 20.6569 15 19C15 17.3431 16.3431 16 18 16C19.6569 16 21 17.3431 21 19Z"
+                                            stroke="#858B89" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <h1>
+                                DevOps Unleashed: Building Scalable Efficient Systems
+                            </h1>
+
+                            <p>
+                                Dive into the world of DevOps and unlock the secrets to faster deployments, improved
+                                collaboration, and resilient systems. This book offers a hands-on approach to mastering
+                                automation, CI/CD pipelines, infrastructure as code, and monitoring tools. Whether
+                                you're a beginner or an experienced engineer, discover strategies to streamline
+                                workflows and deliver high-quality software at scale.
+                            </p>
+                            <p>
+
+                                Dive into the world of DevOps and unlock the secrets to faster deployments, improved
+                                collaboration, and resilient systems. This book offers a hands-on approach to mastering
+                                automation, CI/CD pipelines, infrastructure as code, and monitoring tools. Whether
+                                you're a beginner or an experienced engineer, discover strategies to streamline
+                                workflows and deliver high-quality software at scale.
+                            </p>
+                        </div>
                     </div>
-                    <div class="demologos__box">
-                        <img src="images/demo/ic3.svg" alt="icon">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="recentlyebooks">
+            <div class="container">
+                <h4>You might like it</h4>
+                <div class="row">
+                    <div class="col-xl-4 col-md-6">
+                        <a href="#" class="ebook-item">
+                            <div class="imgwrap">
+                                <img src="images/ebook/ebookimg.jpg" alt="img">
+                            </div>
+                            <div class="description">
+                                <div class="topimfo">
+                                    <span>14 November 2024</span>
+                                    <span>Blockchain</span>
+                                </div>
+                                <h6>Team extension</h6>
+                                <p>
+                                    Expand your capabilities with a dedicated team of remote professionals, fully
+                                    integrated into your current workflow. Ideal for long-term partnerships requiring
+                                    specialized expertise.
+                                </p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="demologos__box">
-                        <img src="images/demo/ic4.svg" alt="icon">
+                    <div class="col-xl-4 col-md-6">
+                        <a href="#" class="ebook-item">
+                            <div class="imgwrap">
+                                <img src="images/ebook/ebookimg.jpg" alt="img">
+                            </div>
+                            <div class="description">
+                                <div class="topimfo">
+                                    <span>14 November 2024</span>
+                                    <span>Blockchain</span>
+                                </div>
+                                <h6>Team extension</h6>
+                                <p>
+                                    Expand your capabilities with a dedicated team of remote professionals, fully
+                                    integrated into your current workflow. Ideal for long-term partnerships requiring
+                                    specialized expertise.
+                                </p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="demologos__box">
-                        <img src="images/demo/ic5.svg" alt="icon">
-                    </div>
-                    <div class="demologos__box">
-                        <img src="images/demo/ic6.svg" alt="icon">
-                    </div>
-                    <div class="demologos__box">
-                        <img src="images/demo/ic7.svg" alt="icon">
-                    </div>
-                    <div class="demologos__box">
-                        <img src="images/demo/ic8.svg" alt="icon">
+                    <div class="col-xl-4 col-md-6">
+                        <a href="#" class="ebook-item">
+                            <div class="imgwrap">
+                                <img src="images/ebook/ebookimg.jpg" alt="img">
+                            </div>
+                            <div class="description">
+                                <div class="topimfo">
+                                    <span>14 November 2024</span>
+                                    <span>Blockchain</span>
+                                </div>
+                                <h6>Team extension</h6>
+                                <p>
+                                    Expand your capabilities with a dedicated team of remote professionals, fully
+                                    integrated into your current workflow. Ideal for long-term partnerships requiring
+                                    specialized expertise.
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
-
-      
-      
-
+        </div>
 
     </main>
 
@@ -1152,7 +1141,7 @@
 
 
 
-    
+
 
 
     <script src="js/lib/jquery.js"></script>
@@ -1160,13 +1149,6 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script src="js/lib/select2.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/demo.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
