@@ -525,7 +525,7 @@
     }
 }
 
-.imgwrap {
+.ebooksingle__formsection .imgwrap {
     height: 380px;
     position: relative;
     overflow: hidden;
@@ -689,6 +689,11 @@
     height: 100%;
 }
 
+.ebooksingle__form .checkebfield {
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
 
 @media(max-width:1399.8px) {
 
@@ -825,6 +830,33 @@
     }
 
 
+    .ebooksingle__formsection .imgwrap {
+        border-radius: 12px;
+    }
+
+    .ebooksingle__form {
+        .inputfield {
+            order: 1;
+        }
+
+        .checkebfield {
+            order: 2;
+            margin-bottom: 12px;
+        }
+
+        .subscribenews__btn {
+            order: 3;
+        }
+    }
+
+    .ebook-info {
+        padding-left: 0;
+        padding-top: 40px;
+    }
+
+    .ebook-info__tags {
+        margin-bottom: 32px;
+    }
 
 }
 
@@ -874,6 +906,25 @@
     .subscribenews__descr {
         margin-bottom: 32px;
     }
+
+    .ebooksingle__formsection .imgwrap,
+    .ebooksingle__formsection .ebooksingle__form {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .ebooksingle__form h6 {
+        font-size: 20px;
+    }
+
+    .ebooksingle__form .checkebfield {
+        margin: 16px 0 32px;
+    }
+
+    .ebook-info {
+        display: none;
+    }
+
 
 }
 
@@ -955,6 +1006,29 @@
     .ebook-item .imgwrap {
         height: 200px;
     }
+
+    .ebooksingle__form .checkebfield label {
+        font-size: 13.5px;
+    }
+
+    .recentlyebooks .ebook-item .description {
+        padding: 16px 20px 20px 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
