@@ -34,6 +34,7 @@
         font-weight: 500;
         font-family: 'PowerGrotesk';
         margin-bottom: 24px;
+        line-height: 100%;
     }
 
     p {
@@ -529,6 +530,7 @@
     height: 380px;
     position: relative;
     overflow: hidden;
+    border-radius: 12px;
 
     img {
         width: 100%;
