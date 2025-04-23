@@ -34,6 +34,7 @@
         font-weight: 500;
         font-family: 'PowerGrotesk';
         margin-bottom: 24px;
+        line-height: 100%;
     }
 
     p {
@@ -529,6 +530,7 @@
     height: 380px;
     position: relative;
     overflow: hidden;
+    border-radius: 12px;
 
     img {
         width: 100%;
@@ -692,6 +694,10 @@
 .ebooksingle__form .checkebfield {
     margin-top: 12px;
     margin-bottom: 0;
+}
+
+.ebook-info__tags {
+    padding-right: 30px;
 }
 
 
@@ -922,9 +928,16 @@
     }
 
     .ebook-info {
-        display: none;
+        padding-top: 60px;
     }
 
+    .ebook-info__tags {
+        margin-bottom: 20px;
+    }
+
+    .ebook-info h1 {
+        font-size: 32px;
+    }
 
 }
 
@@ -985,6 +998,10 @@
     .subscribenews__form .inputfield {
         margin-bottom: 20px;
         padding-right: 0;
+    }
+
+    .ebook-info__tags a, .ebook-info__tags span {
+        font-size: 14px;
     }
 
 

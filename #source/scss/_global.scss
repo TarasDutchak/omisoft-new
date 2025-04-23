@@ -74,11 +74,11 @@ html {
 
 body * {
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    // -webkit-tap-highlight-color: transparent;
+    // -webkit-user-select: none;
+    // -moz-user-select: none;
+    // -ms-user-select: none;
+    // user-select: none;
 }
 
 .main {
@@ -670,3 +670,7 @@ a {
     color: #00ff95;
 }
 
+::selection {
+    background: #CDF765; /* колір фону виділення */
+    color: #000;
+  }

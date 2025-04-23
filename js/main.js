@@ -83,6 +83,7 @@
             spaceBetween: 150,
             speed: 1000,
             effect: "fade",
+            allowTouchMove: false,
             autoplay: {
                 delay: 3500,
                 disableOnInteraction: false,
@@ -156,7 +157,7 @@
             },
         });
 
-
+  
 
 
 
